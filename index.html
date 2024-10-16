@@ -1,11 +1,60 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Electronics Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Anaveo</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, eligendi repudiandae, recusandae quam vel ipsa numquam molestias laborum maxime voluptates dignissimos? Assumenda esse harum molestias laudantium blanditiis dolores sed earum!</p>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">My Portfolio</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Electronics Portfolio</h1>
+            <p>Explore my latest hardware and electronics projects</p>
+            <a href="#projects" class="btn">View Projects</a>
+        </div>
+    </section>
+
+    <!-- Current Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>Current Projects</h2>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>ADAS System Development</h3>
+                <p>Building an Advanced Driver Assistance System from scratch, including custom hardware and software solutions.</p>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>Power Management Module</h3>
+                <p>Designing a custom power management module with PCB layout, firmware development, and optimization.</p>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h3>Automotive Infotainment System</h3>
+                <p>Developing a modern, sleek automotive infotainment system using PyQt and Raspberry Pi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
