@@ -2,96 +2,87 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: Om Anavekar
+    - name: Email
+      value: anavekar.om@gmail.com
+    - name: LinkedIn
+      value: linkedin.com/in/om-anavekar
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: "Master of Science: Electrical & Computer Engineering"
+      institution: Carnegie Mellon University
+      year: 2026.12
+    - title: "Bachelor of Science: Computer & Systems Engineering, Computer Science"
+      institution: Rensselaer Polytechnic Institute, Troy, New York
+      year: 2024.5
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+        - "GPA: 3.7/4.0"
+        - "Relevant Courses: Computer Hardware Design, Microprocessor Systems, Operating Systems"
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Undergraduate Researcher
+      department: Lighting Enabled Systems & Applications
+      year: 2023.9 - 2024.5
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Led development of PCBA for an advanced Time-of-Flight occupancy sensor, utilizing KiCad for schematic design/layout, and Python for sensor data visualization 
+        - Optimized PCBA size and power efficiency, achieving an 85% size reduction compared to initial prototype 
+        - Facilitated weekly design reviews and collaborated with experts and vendors to evaluate sensor offerings
+    
+    - title: Intern (Low Voltage Controllers)
+      department: Tesla Motors
+      year: 2023.1 - 2023.8
       description:
-        - Description 1.
-        - Description 2.
+        - Designed electronic hardware and software for validation of vehicle body controllers  
+        - Performed bench-level testing of newly developed circuit boards, identifying design issues and suggesting optimizations to maximize performance and reliability  
+        - Programmed automation scripts to streamline testing and validation processes
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Founder
+      department: Anaveo Labs
+      year: 2020.6 - 2022.12
       description:
+        - Created Glo, an open-source addressable LED controller for home/commercial lighting  
+        - Designed and developed circuit and embedded software, managing end-to-end product development through multiple iterations to ensure reliability and scalability 
+        - Launched Glo via Kickstarter, receiving 374% of initial funding goal and shipping over 250 units globally
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
+- title: Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Programming Languages
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - C
+        - C++
+        - Python
+        - Dart
+        - SystemVerilog
+    - title: Frameworks and Tools
       items:
-        - Description 1.
-        - Description 2.
-
+        - Linux
+        - Robot Operating System (ROS2)
+        - Docker
+        - Firebase/Google Cloud
+        - Qt
+        - Flutter
+        - OpenCV
+        - Git
+        - XRP Ledger
+    - title: Electronics/Product Design
+      items:
+        - Schematic Capture
+        - PCB Design
+        - KiCad
+        - Altium
+        - LTspice
+        - Autodesk Fusion
+    - title: Hardware
+      items:
+        - Lab Equpment (Oscilloscope, DMM, E-Load)
+        - Embedded Systems (STM32, ESP32, MSP430, ATmega)
+        - Prototyping (3D Printer, Laser Cutter)
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - Backpacking, badminton, boba, the usual Bay Area stuff!
