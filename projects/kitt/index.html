@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>KITT — Om Anavekar</title>
+<meta name="description" content="A (highly overengineered) line follower.">
+<meta name="keywords" content="om, om-anavekar, anaveo, portfolio, hardware, software, embedded">
+<meta name="author" content="Om Anavekar">
+
+<!-- Open Graph -->
+<meta property="og:title" content="KITT">
+<meta property="og:description" content="A (highly overengineered) line follower.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anaveo.github.io/projects/kitt/">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/Om_Favicon_32x32.png" type="image/png">
+
+<!-- Inter font — variable -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Theme init (prevent flash) -->
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    var preferred;
+    if (stored) {
+      preferred = stored;
+    } else {
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      preferred = mq.matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', preferred);
+  })();
+</script>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>KITT | Om Anavekar</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="KITT" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="A (highly overengineered) line follower." />
+<meta property="og:description" content="A (highly overengineered) line follower." />
+<link rel="canonical" href="https://anaveo.github.io/projects/kitt/" />
+<meta property="og:url" content="https://anaveo.github.io/projects/kitt/" />
+<meta property="og:site_name" content="Om Anavekar" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-09T23:41:08+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="KITT" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-03-09T23:41:08+00:00","datePublished":"2026-03-09T23:41:08+00:00","description":"A (highly overengineered) line follower.","headline":"KITT","mainEntityOfPage":{"@type":"WebPage","@id":"https://anaveo.github.io/projects/kitt/"},"url":"https://anaveo.github.io/projects/kitt/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+  <body>
+    <nav class="site-nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">Om Anavekar</a>
+    <div class="nav-links">
+      <a href="/" class="nav-link">Projects</a>
+      <a href="/about/" class="nav-link">About</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+        <!-- Sun icon (shown in dark mode to switch to light) -->
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- Moon icon (shown in light mode to switch to dark) -->
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<script>
+  (function() {
+    var toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+    toggle.addEventListener('click', function() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  })();
+</script>
+
+    <main id="main-content">
+      <div class="page-project">
+
+  <!-- Header -->
+  <header class="project-header">
+    <nav class="project-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Projects</a>
+      <span aria-hidden="true">/</span>
+      <span>KITT</span>
+    </nav>
+    
+      <p class="project-category">just for fun</p>
+    
+    <h1 class="project-title">KITT</h1>
+    
+      <p class="project-description">A (highly overengineered) line follower.</p>
+    
+  </header>
+
+  <!-- Hero image -->
+  
+    <div class="project-hero-img">
+      <img src="/assets/img/projects/kitt/kitt.jpg" alt="KITT" loading="eager">
+    </div>
+  
+
+  <!-- Content -->
+  <div class="project-content prose">
+    <div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        
+<figure class="project-figure">
+  <img src="/assets/img/projects/kitt/render.jpg" alt="render" title="render" loading="eager" />
+  
+</figure>
+
+    </div>
+</div>
+
+<p>The purpose of the project is to develop an autonomous-line following vehicle for robotics/transport purposes. Lines forming paths of various complexities should be tracked in a consistent, controlled manner. The device may be used as a general robotics platform onto which other technologies may be added or explored.<br />
+This project was a joint effort with myself and <a href="https://www.linkedin.com/in/andrew-p-jr">Andrew Prata</a>.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        
+<figure class="project-figure">
+  <img src="/assets/img/projects/kitt/sensors.jpg" alt="sensors" title="sensors" loading="eager" />
+  
+</figure>
+
+    </div>
+</div>
+
+<p>Kitt uses 5 IR sensors to detect the position of the line. It is driven using two geared DC motors, with a swiveling caster wheel in the front. The system is powered using 8 AA batteries.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        
+<figure class="project-figure">
+  <img src="/assets/img/projects/kitt/drawing.jpg" alt="drawing" title="drawing" loading="eager" />
+  
+</figure>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        
+<figure class="project-figure">
+  <img src="/assets/img/projects/kitt/sensor_layout.jpg" alt="sensor_layout" title="sensor_layout" loading="eager" />
+  
+</figure>
+
+    </div>
+</div>
+
+<p>Initially, the vehicle was designed to travel with its drive motors in front, with 4 IR sensors in a T configuration (left). Three sensors were on the axis of the drive motors, and a fourth was placed in the front.</p>
+
+<p>The purpose of the T shaped arrangement was to ensure that the center sensor is always on top of a line. As the three sensors are placed on the same axis as the drive motors, any turn (where both drive motors are rotating with same speed but opposing directions) would have the side sensors rotating about the center sensor. This was designed to ensure quick response in the event of a deviation. During testing, this system did not meet expectations.</p>
+
+<p>The inefficiencies of the initial array led to the creation of the final sensor layout (right). This array consists of 5 IR sensors, linearly spaced by 19 millimeters. With this layout, the vehicle travels with its drive motors on the rear. This layout allows a wide band of sensory input. As the sensors are placed in the front of the chassis, the vehicle can course-correct in advance.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        
+<figure class="project-figure">
+  <img src="/assets/img/projects/kitt/cad.jpg" alt="cad" title="cad" loading="eager" />
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    CAD Model. Designed in Autodesk Fusion 360
+</div>
+<div class="row">
+    <div class="col-sm mt-4 mt-md-0">
+        
+<figure class="project-figure">
+  <img src="/assets/img/projects/kitt/chassis_side.jpg" alt="chassis_side" title="chassis_side" loading="eager" />
+  
+</figure>
+
+    </div>
+    <div class="col-sm mt-4 mt-md-0">
+        
+<figure class="project-figure">
+  <img src="/assets/img/projects/kitt/chassis_top.jpg" alt="chassis_top" title="chassis_top" loading="eager" />
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Chassis construction (made using laser-cut MDF)
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        
+<figure class="project-figure">
+  <img src="/assets/img/projects/kitt/andrew_wiring.jpg" alt="andrew_wiring" title="andrew_wiring" loading="eager" />
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Electronics wiring (CAD &amp; wiring by Andrew Prata)
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        
+<figure class="project-figure">
+  <img src="/assets/img/projects/kitt/debugging.jpg" alt="debugging" title="debugging" loading="eager" />
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Software testing and debugging
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        
+<figure class="project-figure">
+  <img src="/assets/img/projects/kitt/kitt.jpg" alt="kitt" title="kitt" loading="eager" />
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Completed prototype
+</div>
+
+  </div>
+
+  <!-- Back link -->
+  <a href="/" class="back-to-projects">← All Projects</a>
+
+</div>
+
+    </main>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; 2026 Om Anavekar</span>
+    <span class="footer-sep" aria-hidden="true">—</span>
+    <a href="https://github.com/anaveo" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://linkedin.com/in/om-anavekar" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</footer>
+
+<style>
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: var(--space-6) var(--side-pad);
+}
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+.footer-sep { opacity: 0.4; }
+.footer-link {
+  color: var(--muted);
+  transition: color var(--ease);
+}
+.footer-link:hover { color: var(--text); }
+</style>
+
+  </body>
+</html>

@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Om Anavekar</title>
+<meta name="description" content="Engineer and tinkerer building at the intersection of hardware, software, and AI.">
+<meta name="keywords" content="om, om-anavekar, anaveo, portfolio, hardware, software, embedded">
+<meta name="author" content="Om Anavekar">
+
+<!-- Open Graph -->
+<meta property="og:title" content="">
+<meta property="og:description" content="Engineer and tinkerer building at the intersection of hardware, software, and AI.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anaveo.github.io/">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/Om_Favicon_32x32.png" type="image/png">
+
+<!-- Inter font — variable -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Theme init (prevent flash) -->
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    var preferred;
+    if (stored) {
+      preferred = stored;
+    } else {
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      preferred = mq.matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', preferred);
+  })();
+</script>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Om Anavekar | Engineer and tinkerer building at the intersection of hardware, software, and AI.</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Om Anavekar" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Engineer and tinkerer building at the intersection of hardware, software, and AI." />
+<meta property="og:description" content="Engineer and tinkerer building at the intersection of hardware, software, and AI." />
+<link rel="canonical" href="https://anaveo.github.io/" />
+<meta property="og:url" content="https://anaveo.github.io/" />
+<meta property="og:site_name" content="Om Anavekar" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Om Anavekar" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Engineer and tinkerer building at the intersection of hardware, software, and AI.","headline":"Om Anavekar","name":"Om Anavekar","url":"https://anaveo.github.io/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+  <body>
+    <nav class="site-nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">Om Anavekar</a>
+    <div class="nav-links">
+      <a href="/" class="nav-link active">Projects</a>
+      <a href="/about/" class="nav-link">About</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+        <!-- Sun icon (shown in dark mode to switch to light) -->
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- Moon icon (shown in light mode to switch to dark) -->
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<script>
+  (function() {
+    var toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+    toggle.addEventListener('click', function() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  })();
+</script>
+
+    <main id="main-content">
+      <div class="page-home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <p class="hero-eyebrow">Portfolio</p>
+    <h1 class="hero-headline">Hardware &amp; Software Projects</h1>
+    <p class="hero-sub">Engineer and tinkerer building at the intersection of embedded systems, robotics, and software.</p>
+  </section>
+
+  <!-- Project Grid -->
+  <section class="projects-section">
+    <div class="section-header">
+      <span class="section-label">Projects</span>
+      <span class="section-count">12</span>
+    </div>
+
+    
+    
+
+    <div class="project-grid">
+      
+        
+        
+        <a href="/projects/sol/" class="project-card">
+
+          <!-- Image -->
+          <div class="card-img-wrap">
+            
+              <img
+                src="/assets/img/projects/sol/sol.jpg"
+                alt="Sol"
+                loading="lazy"
+              >
+            
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+            
+              <span class="card-category">just for fun</span>
+            
+            <h2 class="card-title">Sol</h2>
+            
+              <p class="card-desc">A concept automatic solar tracker.</p>
+            
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            
+              <time>2026</time>
+            
+            <span class="card-arrow">→</span>
+          </div>
+
+        </a>
+      
+        
+        
+        <a href="/projects/saltscale/" class="project-card">
+
+          <!-- Image -->
+          <div class="card-img-wrap">
+            
+              <img
+                src="/assets/img/projects/saltscale/saltscale.jpg"
+                alt="SaltScale"
+                loading="lazy"
+              >
+            
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+            
+              <span class="card-category">just for fun</span>
+            
+            <h2 class="card-title">SaltScale</h2>
+            
+              <p class="card-desc">A water softener brine tank sensor using off-the-shelf parts.</p>
+            
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            
+              <time>2026</time>
+            
+            <span class="card-arrow">→</span>
+          </div>
+
+        </a>
+      
+        
+        
+        <a href="/projects/omnipet/" class="project-card">
+
+          <!-- Image -->
+          <div class="card-img-wrap">
+            
+              <img
+                src="/assets/img/projects/omnipet/feeding.jpg"
+                alt="OmniPet"
+                loading="lazy"
+              >
+            
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+            
+              <span class="card-category">just for fun</span>
+            
+            <h2 class="card-title">OmniPet</h2>
+            
+              <p class="card-desc">An automated pet feeder.</p>
+            
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            
+              <time>2026</time>
+            
+            <span class="card-arrow">→</span>
+          </div>
+
+        </a>
+      
+        
+        
+        <a href="/projects/lazr/" class="project-card">
+
+          <!-- Image -->
+          <div class="card-img-wrap">
+            
+              <img
+                src="/assets/img/projects/lazr/lazr.jpg"
+                alt="LAZR"
+                loading="lazy"
+              >
+            
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+            
+              <span class="card-category">just for fun</span>
+            
+            <h2 class="card-title">LAZR</h2>
+            
+              <p class="card-desc">A gesture-based TV remote.</p>
+            
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            
+              <time>2026</time>
+            
+            <span class="card-arrow">→</span>
+          </div>
+
+        </a>
+      
+        
+        
+        <a href="/projects/kitt/" class="project-card">
+
+          <!-- Image -->
+          <div class="card-img-wrap">
+            
+              <img
+                src="/assets/img/projects/kitt/kitt.jpg"
+                alt="KITT"
+                loading="lazy"
+              >
+            
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+            
+              <span class="card-category">just for fun</span>
+            
+            <h2 class="card-title">KITT</h2>
+            
+              <p class="card-desc">A (highly overengineered) line follower.</p>
+            
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            
+              <time>2026</time>
+            
+            <span class="card-arrow">→</span>
+          </div>
+
+        </a>
+      
+        
+        
+        <a href="/projects/glo-r2/" class="project-card">
+
+          <!-- Image -->
+          <div class="card-img-wrap">
+            
+              <img
+                src="/assets/img/projects/glo_r2/glo_r2.jpg"
+                alt="Glo Rev 2"
+                loading="lazy"
+              >
+            
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+            
+              <span class="card-category">the big stuff</span>
+            
+            <h2 class="card-title">Glo Rev 2</h2>
+            
+              <p class="card-desc">A series of Internet-connected, RGB & ARGB LED controllers.</p>
+            
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            
+              <time>2026</time>
+            
+            <span class="card-arrow">→</span>
+          </div>
+
+        </a>
+      
+        
+        
+        <a href="/projects/glo-r1/" class="project-card">
+
+          <!-- Image -->
+          <div class="card-img-wrap">
+            
+              <img
+                src="/assets/img/projects/glo_r1/top.jpg"
+                alt="Glo Rev 1"
+                loading="lazy"
+              >
+            
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+            
+              <span class="card-category">just for fun</span>
+            
+            <h2 class="card-title">Glo Rev 1</h2>
+            
+              <p class="card-desc">A quad-channel adressable RGB LED controller.</p>
+            
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            
+              <time>2026</time>
+            
+            <span class="card-arrow">→</span>
+          </div>
+
+        </a>
+      
+        
+        
+        <a href="/projects/gestr/" class="project-card">
+
+          <!-- Image -->
+          <div class="card-img-wrap">
+            
+              <img
+                src="/assets/img/projects/gestr/gestr.jpg"
+                alt="Gestr"
+                loading="lazy"
+              >
+            
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+            
+              <span class="card-category">just for fun</span>
+            
+            <h2 class="card-title">Gestr</h2>
+            
+              <p class="card-desc">A smart glove for speech impairments.</p>
+            
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            
+              <time>2026</time>
+            
+            <span class="card-arrow">→</span>
+          </div>
+
+        </a>
+      
+        
+        
+        <a href="/projects/do-droid/" class="project-card">
+
+          <!-- Image -->
+          <div class="card-img-wrap">
+            
+              <img
+                src="/assets/img/projects/do_droid/do_droid.jpg"
+                alt="D-O Droid"
+                loading="lazy"
+              >
+            
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+            
+              <span class="card-category">just for fun</span>
+            
+            <h2 class="card-title">D-O Droid</h2>
+            
+              <p class="card-desc">A companion bot inspired by the popular Star Wars droid.</p>
+            
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            
+              <time>2026</time>
+            
+            <span class="card-arrow">→</span>
+          </div>
+
+        </a>
+      
+        
+        
+        <a href="/projects/cosmopilot/" class="project-card">
+
+          <!-- Image -->
+          <div class="card-img-wrap">
+            
+              <img
+                src="/assets/img/projects/cosmopilot/cosmopilot.jpg"
+                alt="Cosmopilot"
+                loading="lazy"
+              >
+            
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+            
+              <span class="card-category">just for fun</span>
+            
+            <h2 class="card-title">Cosmopilot</h2>
+            
+              <p class="card-desc">An extraterrestrial navigation app that uses satellite topographical data to generate safe paths.</p>
+            
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            
+              <time>2026</time>
+            
+            <span class="card-arrow">→</span>
+          </div>
+
+        </a>
+      
+        
+        
+        <a href="/projects/automotiq-ai/" class="project-card">
+
+          <!-- Image -->
+          <div class="card-img-wrap">
+            
+              <img
+                src="/assets/img/projects/automotiq/automotiq.jpg"
+                alt="Automotiq.ai"
+                loading="lazy"
+              >
+            
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+            
+              <span class="card-category">the big stuff</span>
+            
+            <h2 class="card-title">Automotiq.ai</h2>
+            
+              <p class="card-desc">Real-time fleet vehicle maintenance with AI.</p>
+            
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            
+              <time>2026</time>
+            
+            <span class="card-arrow">→</span>
+          </div>
+
+        </a>
+      
+        
+        
+        <a href="/projects/aria-mk1/" class="project-card">
+
+          <!-- Image -->
+          <div class="card-img-wrap">
+            
+              <img
+                src="/assets/img/projects/aria_mk1/front.jpg"
+                alt="Aria MK1"
+                loading="lazy"
+              >
+            
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+            
+              <span class="card-category">just for fun</span>
+            
+            <h2 class="card-title">Aria MK1</h2>
+            
+              <p class="card-desc">A portable wind turbine for hikers and remote personnel.</p>
+            
+          </div>
+
+          <!-- Footer -->
+          <div class="card-footer">
+            
+              <time>2026</time>
+            
+            <span class="card-arrow">→</span>
+          </div>
+
+        </a>
+      
+    </div>
+  </section>
+
+</div>
+
+    </main>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; 2026 Om Anavekar</span>
+    <span class="footer-sep" aria-hidden="true">—</span>
+    <a href="https://github.com/anaveo" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://linkedin.com/in/om-anavekar" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</footer>
+
+<style>
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: var(--space-6) var(--side-pad);
+}
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+.footer-sep { opacity: 0.4; }
+.footer-link {
+  color: var(--muted);
+  transition: color var(--ease);
+}
+.footer-link:hover { color: var(--text); }
+</style>
+
+  </body>
+</html>

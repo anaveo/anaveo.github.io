@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://anaveo.github.io/sitemap.xml
