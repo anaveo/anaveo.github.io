@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wsl -d Ubuntu -e sh -c \"which ruby && ruby -v && which bundle && bundle -v\")"
+    ]
+  }
+}

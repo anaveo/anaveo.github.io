@@ -1,0 +1,30 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; {{ 'now' | date: "%Y" }} {{ site.first_name }} {{ site.last_name }}</span>
+    <span class="footer-sep" aria-hidden="true">—</span>
+    <a href="https://github.com/{{ site.data.socials.github_username }}" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://linkedin.com/in/{{ site.data.socials.linkedin_username }}" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</footer>
+
+<style>
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: var(--space-6) var(--side-pad);
+}
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+.footer-sep { opacity: 0.4; }
+.footer-link {
+  color: var(--muted);
+  transition: color var(--ease);
+}
+.footer-link:hover { color: var(--text); }
+</style>

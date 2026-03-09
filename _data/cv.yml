@@ -1,0 +1,88 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Om Anavekar
+    - name: Email
+      value: anavekar.om@gmail.com
+    - name: LinkedIn
+      value: linkedin.com/in/om-anavekar
+
+- title: Education
+  type: time_table
+  contents:
+    - title: "Master of Science: Electrical & Computer Engineering"
+      institution: Carnegie Mellon University
+      year: 2026.12
+    - title: "Bachelor of Science: Computer & Systems Engineering, Computer Science"
+      institution: Rensselaer Polytechnic Institute, Troy, New York
+      year: 2024.5
+      description:
+        - "GPA: 3.7/4.0"
+        - "Relevant Courses: Computer Hardware Design, Microprocessor Systems, Operating Systems"
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: Undergraduate Researcher
+      department: Lighting Enabled Systems & Applications
+      year: 2023.9 - 2024.5
+      description:
+        - Led development of PCBA for an advanced Time-of-Flight occupancy sensor, utilizing KiCad for schematic design/layout, and Python for sensor data visualization 
+        - Optimized PCBA size and power efficiency, achieving an 85% size reduction compared to initial prototype 
+        - Facilitated weekly design reviews and collaborated with experts and vendors to evaluate sensor offerings
+    
+    - title: Intern (Low Voltage Controllers)
+      department: Tesla Motors
+      year: 2023.1 - 2023.8
+      description:
+        - Designed electronic hardware and software for validation of vehicle body controllers  
+        - Performed bench-level testing of newly developed circuit boards, identifying design issues and suggesting optimizations to maximize performance and reliability  
+        - Programmed automation scripts to streamline testing and validation processes
+
+    - title: Founder
+      department: Anaveo Labs
+      year: 2020.6 - 2022.12
+      description:
+        - Created Glo, an open-source addressable LED controller for home/commercial lighting  
+        - Designed and developed circuit and embedded software, managing end-to-end product development through multiple iterations to ensure reliability and scalability 
+        - Launched Glo via Kickstarter, receiving 374% of initial funding goal and shipping over 250 units globally
+
+- title: Skills
+  type: nested_list
+  contents:
+    - title: Programming Languages
+      items:
+        - C
+        - C++
+        - Python
+        - Dart
+        - SystemVerilog
+    - title: Frameworks and Tools
+      items:
+        - Linux
+        - Robot Operating System (ROS2)
+        - Docker
+        - Firebase/Google Cloud
+        - Qt
+        - Flutter
+        - OpenCV
+        - Git
+        - XRP Ledger
+    - title: Electronics/Product Design
+      items:
+        - Schematic Capture
+        - PCB Design
+        - KiCad
+        - Altium
+        - LTspice
+        - Autodesk Fusion
+    - title: Hardware
+      items:
+        - Lab Equpment (Oscilloscope, DMM, E-Load)
+        - Embedded Systems (STM32, ESP32, MSP430, ATmega)
+        - Prototyping (3D Printer, Laser Cutter)
+- title: Other Interests
+  type: list
+  contents:
+    - Backpacking, badminton, boba, the usual Bay Area stuff!

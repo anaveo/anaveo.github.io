@@ -1,0 +1,18 @@
+{% comment %}
+  Drop-in replacement for al-folio's figure.liquid.
+  Accepts: path, title, caption, loading, alt, width, height
+  Ignores: class (img-fluid, z-depth-*), slot, zoomable, url, cache_bust, sizes, avoid_scaling
+{% endcomment %}
+<figure class="project-figure">
+  <img
+    src="{{ include.path | relative_url }}"
+    alt="{% if include.alt %}{{ include.alt }}{% elsif include.title %}{{ include.title }}{% elsif include.caption %}{{ include.caption }}{% endif %}"
+    {% if include.title %}title="{{ include.title }}"{% endif %}
+    {% if include.loading %}loading="{{ include.loading }}"{% else %}loading="lazy"{% endif %}
+    {% if include.width %}width="{{ include.width }}"{% endif %}
+    {% if include.height %}height="{{ include.height }}"{% endif %}
+  >
+  {% if include.caption %}
+    <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>

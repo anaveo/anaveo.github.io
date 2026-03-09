@@ -1,0 +1,161 @@
+// =============================================================================
+// Project Detail Page
+// =============================================================================
+
+.page-project {
+  padding-top: var(--nav-height);
+}
+
+.project-header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-12) var(--side-pad) var(--space-8);
+  border-bottom: 1px solid var(--border);
+}
+
+.project-breadcrumb {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+
+  a {
+    color: var(--muted);
+    transition: color var(--ease);
+    &:hover { color: var(--accent); }
+  }
+
+  span {
+    color: var(--muted);
+    opacity: 0.5;
+  }
+}
+
+.project-category {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-3);
+}
+
+.project-title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: var(--space-4);
+  max-width: 24ch;
+}
+
+.project-description {
+  font-size: var(--text-lg);
+  color: var(--muted);
+  max-width: 60ch;
+  line-height: 1.6;
+}
+
+// Hero image
+.project-hero-img {
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-12);
+  padding: 0 var(--side-pad);
+  margin-top: var(--space-8);
+
+  img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: var(--card-radius);
+    border: 1px solid var(--border);
+  }
+}
+
+// Content column
+.project-content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 var(--side-pad) var(--space-24);
+}
+
+// Figures inside project content
+.project-figure {
+  margin: var(--space-8) 0;
+
+  img {
+    width: 100%;
+    border-radius: var(--card-radius);
+    border: 1px solid var(--border);
+  }
+
+  figcaption {
+    font-size: var(--text-sm);
+    color: var(--muted);
+    text-align: center;
+    margin-top: var(--space-3);
+    line-height: 1.5;
+  }
+}
+
+// Navigation between projects
+.project-nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-8) var(--side-pad) var(--space-16);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.project-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  color: var(--text);
+  transition: color var(--ease);
+
+  &:hover { color: var(--accent); }
+
+  .nav-dir {
+    font-size: var(--text-xs);
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .nav-title {
+    font-size: var(--text-base);
+    font-weight: 500;
+  }
+
+  &.next {
+    text-align: right;
+    @media (max-width: 640px) { text-align: left; }
+  }
+}
+
+.back-to-projects {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin: var(--space-8) auto 0;
+  max-width: 780px;
+  padding: 0 var(--side-pad);
+  display: block;
+  transition: color var(--ease);
+
+  &:hover { color: var(--accent); }
+}

@@ -1,0 +1,99 @@
+// =============================================================================
+// Navigation Bar
+// =============================================================================
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  background: rgba(14, 14, 15, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: background var(--ease), border-color var(--ease);
+
+  [data-theme="light"] & {
+    background: rgba(248, 248, 247, 0.85);
+  }
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--side-pad);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  transition: color var(--ease);
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.nav-link {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  font-weight: 500;
+  transition: color var(--ease);
+  letter-spacing: 0.01em;
+
+  &:hover,
+  &.active {
+    color: var(--text);
+  }
+}
+
+// Dark mode toggle button
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  transition: color var(--ease), border-color var(--ease), background var(--ease);
+
+  &:hover {
+    color: var(--text);
+    border-color: var(--muted);
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .icon-sun  { display: none; }
+  .icon-moon { display: block; }
+
+  [data-theme="light"] & {
+    .icon-sun  { display: block; }
+    .icon-moon { display: none; }
+  }
+}
