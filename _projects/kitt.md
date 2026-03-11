@@ -3,6 +3,7 @@ layout: project
 title: KITT
 description: A (highly overengineered) line follower.
 img: assets/img/projects/kitt/kitt.jpg
+date: 2022-06-01
 importance: 4
 category: just for fun
 ---

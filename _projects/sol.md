@@ -3,6 +3,7 @@ layout: project
 title: Sol
 description: A concept automatic solar tracker.
 img: assets/img/projects/sol/sol.jpg
+date: 2018-01-01
 importance: 4
 category: just for fun
 ---

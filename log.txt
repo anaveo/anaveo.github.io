@@ -1,0 +1,580 @@
+2026-03-10T01:30:39.4932388Z Current runner version: '2.332.0'
+2026-03-10T01:30:39.4957093Z ##[group]Runner Image Provisioner
+2026-03-10T01:30:39.4957872Z Hosted Compute Agent
+2026-03-10T01:30:39.4958457Z Version: 20260213.493
+2026-03-10T01:30:39.4959171Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-10T01:30:39.4960193Z Build Date: 2026-02-13T00:28:41Z
+2026-03-10T01:30:39.4960875Z Worker ID: {0ffdeaf8-e690-471f-80a7-c27b02fb4852}
+2026-03-10T01:30:39.4961608Z Azure Region: northcentralus
+2026-03-10T01:30:39.4962242Z ##[endgroup]
+2026-03-10T01:30:39.4963717Z ##[group]Operating System
+2026-03-10T01:30:39.4964402Z Ubuntu
+2026-03-10T01:30:39.4964920Z 24.04.3
+2026-03-10T01:30:39.4965404Z LTS
+2026-03-10T01:30:39.4965827Z ##[endgroup]
+2026-03-10T01:30:39.4966425Z ##[group]Runner Image
+2026-03-10T01:30:39.4966990Z Image: ubuntu-24.04
+2026-03-10T01:30:39.4967465Z Version: 20260302.42.1
+2026-03-10T01:30:39.4968766Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260302.42/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-10T01:30:39.4970881Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260302.42
+2026-03-10T01:30:39.4971786Z ##[endgroup]
+2026-03-10T01:30:39.4972898Z ##[group]GITHUB_TOKEN Permissions
+2026-03-10T01:30:39.4974848Z Contents: read
+2026-03-10T01:30:39.4975432Z Metadata: read
+2026-03-10T01:30:39.4975924Z Pages: write
+2026-03-10T01:30:39.4976538Z ##[endgroup]
+2026-03-10T01:30:39.4978483Z Secret source: Actions
+2026-03-10T01:30:39.4979209Z Prepare workflow directory
+2026-03-10T01:30:39.5433591Z Prepare all required actions
+2026-03-10T01:30:39.5488946Z Getting action download info
+2026-03-10T01:30:39.8985731Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-10T01:30:40.0390411Z Download action repository 'ruby/setup-ruby@v1' (SHA:6ca151fd1bfcfd6fe0c4eb6837eb0584d0134a0c)
+2026-03-10T01:30:40.3790118Z Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+2026-03-10T01:30:40.7428253Z Getting action download info
+2026-03-10T01:30:40.8590141Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-03-10T01:30:41.0028102Z Complete job name: build
+2026-03-10T01:30:41.0846290Z ##[group]Run actions/checkout@v4
+2026-03-10T01:30:41.0847510Z with:
+2026-03-10T01:30:41.0848241Z   repository: anaveo/anaveo.github.io
+2026-03-10T01:30:41.0849843Z   token: ***
+2026-03-10T01:30:41.0850585Z   ssh-strict: true
+2026-03-10T01:30:41.0851316Z   ssh-user: git
+2026-03-10T01:30:41.0852052Z   persist-credentials: true
+2026-03-10T01:30:41.0852880Z   clean: true
+2026-03-10T01:30:41.0853614Z   sparse-checkout-cone-mode: true
+2026-03-10T01:30:41.0854528Z   fetch-depth: 1
+2026-03-10T01:30:41.0855247Z   fetch-tags: false
+2026-03-10T01:30:41.0855988Z   show-progress: true
+2026-03-10T01:30:41.0856733Z   lfs: false
+2026-03-10T01:30:41.0857411Z   submodules: false
+2026-03-10T01:30:41.0858162Z   set-safe-directory: true
+2026-03-10T01:30:41.0859426Z ##[endgroup]
+2026-03-10T01:30:41.1974647Z Syncing repository: anaveo/anaveo.github.io
+2026-03-10T01:30:41.1977496Z ##[group]Getting Git version info
+2026-03-10T01:30:41.1979029Z Working directory is '/home/runner/work/anaveo.github.io/anaveo.github.io'
+2026-03-10T01:30:41.1981583Z [command]/usr/bin/git version
+2026-03-10T01:30:41.2049518Z git version 2.53.0
+2026-03-10T01:30:41.2076626Z ##[endgroup]
+2026-03-10T01:30:41.2091807Z Temporarily overriding HOME='/home/runner/work/_temp/d56d571f-04ae-4ea2-9329-0ecb50e23cfa' before making global git config changes
+2026-03-10T01:30:41.2094553Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-10T01:30:41.2106359Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/anaveo.github.io/anaveo.github.io
+2026-03-10T01:30:41.2145533Z Deleting the contents of '/home/runner/work/anaveo.github.io/anaveo.github.io'
+2026-03-10T01:30:41.2148842Z ##[group]Initializing the repository
+2026-03-10T01:30:41.2153512Z [command]/usr/bin/git init /home/runner/work/anaveo.github.io/anaveo.github.io
+2026-03-10T01:30:41.2257472Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-10T01:30:41.2260991Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-10T01:30:41.2263890Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-10T01:30:41.2265350Z hint: call:
+2026-03-10T01:30:41.2266233Z hint:
+2026-03-10T01:30:41.2267155Z hint: 	git config --global init.defaultBranch <name>
+2026-03-10T01:30:41.2268790Z hint:
+2026-03-10T01:30:41.2270203Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-10T01:30:41.2271977Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-10T01:30:41.2273604Z hint:
+2026-03-10T01:30:41.2274778Z hint: 	git branch -m <name>
+2026-03-10T01:30:41.2275668Z hint:
+2026-03-10T01:30:41.2276828Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-10T01:30:41.2279144Z Initialized empty Git repository in /home/runner/work/anaveo.github.io/anaveo.github.io/.git/
+2026-03-10T01:30:41.2282944Z [command]/usr/bin/git remote add origin https://github.com/anaveo/anaveo.github.io
+2026-03-10T01:30:41.2312779Z ##[endgroup]
+2026-03-10T01:30:41.2314362Z ##[group]Disabling automatic garbage collection
+2026-03-10T01:30:41.2316017Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-10T01:30:41.2346286Z ##[endgroup]
+2026-03-10T01:30:41.2347824Z ##[group]Setting up auth
+2026-03-10T01:30:41.2352330Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-10T01:30:41.2385251Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-10T01:30:41.2734746Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-10T01:30:41.2765105Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-10T01:30:41.3001964Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-10T01:30:41.3041484Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-10T01:30:41.3280108Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-10T01:30:41.3316633Z ##[endgroup]
+2026-03-10T01:30:41.3318867Z ##[group]Fetching the repository
+2026-03-10T01:30:41.3328650Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +82c4f10ff0326ef6be5ef4dacebce41661e090c2:refs/remotes/origin/main
+2026-03-10T01:30:41.9066760Z From https://github.com/anaveo/anaveo.github.io
+2026-03-10T01:30:41.9068972Z  * [new ref]         82c4f10ff0326ef6be5ef4dacebce41661e090c2 -> origin/main
+2026-03-10T01:30:41.9102583Z ##[endgroup]
+2026-03-10T01:30:41.9104894Z ##[group]Determining the checkout info
+2026-03-10T01:30:41.9107404Z ##[endgroup]
+2026-03-10T01:30:41.9110323Z [command]/usr/bin/git sparse-checkout disable
+2026-03-10T01:30:41.9162395Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-10T01:30:41.9191826Z ##[group]Checking out the ref
+2026-03-10T01:30:41.9196570Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-03-10T01:30:41.9792899Z Switched to a new branch 'main'
+2026-03-10T01:30:41.9795129Z branch 'main' set up to track 'origin/main'.
+2026-03-10T01:30:41.9811767Z ##[endgroup]
+2026-03-10T01:30:41.9850918Z [command]/usr/bin/git log -1 --format=%H
+2026-03-10T01:30:41.9874907Z 82c4f10ff0326ef6be5ef4dacebce41661e090c2
+2026-03-10T01:30:42.0151062Z ##[group]Run ruby/setup-ruby@v1
+2026-03-10T01:30:42.0151944Z with:
+2026-03-10T01:30:42.0152582Z   ruby-version: 3.3
+2026-03-10T01:30:42.0153496Z   bundler-cache: true
+2026-03-10T01:30:42.0154483Z   token: ***
+2026-03-10T01:30:42.0155132Z ##[endgroup]
+2026-03-10T01:30:42.1956751Z ##[group]Modifying PATH
+2026-03-10T01:30:42.1961383Z Entries added to PATH to use selected Ruby:
+2026-03-10T01:30:42.1965604Z   /opt/hostedtoolcache/Ruby/3.3.10/x64/bin
+2026-03-10T01:30:42.1974214Z ##[endgroup]
+2026-03-10T01:30:42.1976419Z ##[group]Print Ruby version
+2026-03-10T01:30:42.2121172Z [command]/opt/hostedtoolcache/Ruby/3.3.10/x64/bin/ruby --version
+2026-03-10T01:30:42.4515551Z ruby 3.3.10 (2025-10-23 revision 343ea05002) [x86_64-linux]
+2026-03-10T01:30:42.4548383Z Took   0.26 seconds
+2026-03-10T01:30:42.4549955Z ##[endgroup]
+2026-03-10T01:30:42.4551381Z ##[group]Installing Bundler
+2026-03-10T01:30:42.4556524Z Using Bundler 4.0.7 from Gemfile.lock BUNDLED WITH 4.0.7
+2026-03-10T01:30:42.4561475Z [command]/opt/hostedtoolcache/Ruby/3.3.10/x64/bin/gem install bundler -v 4.0.7
+2026-03-10T01:30:44.2792080Z Successfully installed bundler-4.0.7
+2026-03-10T01:30:44.2792948Z 1 gem installed
+2026-03-10T01:30:44.2858956Z Took   1.83 seconds
+2026-03-10T01:30:44.2860253Z ##[endgroup]
+2026-03-10T01:30:44.2862564Z > bundle install
+2026-03-10T01:30:44.2866605Z Setting BUNDLER_VERSION=4.0.7 for "bundle config|lock" commands below to ensure Bundler 4.0.7 is used
+2026-03-10T01:30:44.2892041Z [command]/opt/hostedtoolcache/Ruby/3.3.10/x64/bin/bundle config set --local path /home/runner/work/anaveo.github.io/anaveo.github.io/vendor/bundle
+2026-03-10T01:30:44.4778070Z [command]/opt/hostedtoolcache/Ruby/3.3.10/x64/bin/bundle config set --local deployment true
+2026-03-10T01:30:44.6306449Z ##[group]Print lockfile
+2026-03-10T01:30:44.6322901Z [command]/usr/bin/cat Gemfile.lock
+2026-03-10T01:30:44.6348266Z GEM
+2026-03-10T01:30:44.6348746Z   remote: https://rubygems.org/
+2026-03-10T01:30:44.6349597Z   specs:
+2026-03-10T01:30:44.6349991Z     addressable (2.8.9)
+2026-03-10T01:30:44.6350426Z       public_suffix (>= 2.0.2, < 8.0)
+2026-03-10T01:30:44.6350904Z     base64 (0.3.0)
+2026-03-10T01:30:44.6351290Z     bigdecimal (4.0.1)
+2026-03-10T01:30:44.6351776Z     colorator (1.1.0)
+2026-03-10T01:30:44.6362063Z     concurrent-ruby (1.3.6)
+2026-03-10T01:30:44.6362486Z     csv (3.3.5)
+2026-03-10T01:30:44.6362862Z     em-websocket (0.5.3)
+2026-03-10T01:30:44.6363254Z       eventmachine (>= 0.12.9)
+2026-03-10T01:30:44.6363683Z       http_parser.rb (~> 0)
+2026-03-10T01:30:44.6364082Z     eventmachine (1.2.7)
+2026-03-10T01:30:44.6364442Z     ffi (1.17.3)
+2026-03-10T01:30:44.6364787Z     ffi (1.17.3-aarch64-linux-gnu)
+2026-03-10T01:30:44.6365236Z     ffi (1.17.3-aarch64-linux-musl)
+2026-03-10T01:30:44.6365680Z     ffi (1.17.3-arm-linux-gnu)
+2026-03-10T01:30:44.6366101Z     ffi (1.17.3-arm-linux-musl)
+2026-03-10T01:30:44.6366584Z     ffi (1.17.3-arm64-darwin)
+2026-03-10T01:30:44.6367049Z     ffi (1.17.3-x86-linux-gnu)
+2026-03-10T01:30:44.6367476Z     ffi (1.17.3-x86-linux-musl)
+2026-03-10T01:30:44.6367884Z     ffi (1.17.3-x86_64-darwin)
+2026-03-10T01:30:44.6368287Z     ffi (1.17.3-x86_64-linux-gnu)
+2026-03-10T01:30:44.6368728Z     ffi (1.17.3-x86_64-linux-musl)
+2026-03-10T01:30:44.6369183Z     forwardable-extended (2.6.0)
+2026-03-10T01:30:44.6369846Z     google-protobuf (4.34.0)
+2026-03-10T01:30:44.6370244Z       bigdecimal
+2026-03-10T01:30:44.6370580Z       rake (~> 13.3)
+2026-03-10T01:30:44.6370988Z     google-protobuf (4.34.0-aarch64-linux-gnu)
+2026-03-10T01:30:44.6371483Z       bigdecimal
+2026-03-10T01:30:44.6371804Z       rake (~> 13.3)
+2026-03-10T01:30:44.6372234Z     google-protobuf (4.34.0-aarch64-linux-musl)
+2026-03-10T01:30:44.6372730Z       bigdecimal
+2026-03-10T01:30:44.6373074Z       rake (~> 13.3)
+2026-03-10T01:30:44.6373466Z     google-protobuf (4.34.0-arm64-darwin)
+2026-03-10T01:30:44.6373927Z       bigdecimal
+2026-03-10T01:30:44.6374245Z       rake (~> 13.3)
+2026-03-10T01:30:44.6374629Z     google-protobuf (4.34.0-x86-linux-gnu)
+2026-03-10T01:30:44.6375584Z       bigdecimal
+2026-03-10T01:30:44.6375966Z       rake (~> 13.3)
+2026-03-10T01:30:44.6376345Z     google-protobuf (4.34.0-x86-linux-musl)
+2026-03-10T01:30:44.6377225Z       bigdecimal
+2026-03-10T01:30:44.6377555Z       rake (~> 13.3)
+2026-03-10T01:30:44.6377928Z     google-protobuf (4.34.0-x86_64-darwin)
+2026-03-10T01:30:44.6378358Z       bigdecimal
+2026-03-10T01:30:44.6378662Z       rake (~> 13.3)
+2026-03-10T01:30:44.6379054Z     google-protobuf (4.34.0-x86_64-linux-gnu)
+2026-03-10T01:30:44.6379717Z       bigdecimal
+2026-03-10T01:30:44.6380041Z       rake (~> 13.3)
+2026-03-10T01:30:44.6380427Z     google-protobuf (4.34.0-x86_64-linux-musl)
+2026-03-10T01:30:44.6380892Z       bigdecimal
+2026-03-10T01:30:44.6381210Z       rake (~> 13.3)
+2026-03-10T01:30:44.6381568Z     http_parser.rb (0.8.1)
+2026-03-10T01:30:44.6446027Z     i18n (1.14.8)
+2026-03-10T01:30:44.6446458Z       concurrent-ruby (~> 1.0)
+2026-03-10T01:30:44.6446837Z     jekyll (4.4.1)
+2026-03-10T01:30:44.6447272Z       addressable (~> 2.4)
+2026-03-10T01:30:44.6447708Z       base64 (~> 0.2)
+2026-03-10T01:30:44.6448128Z       colorator (~> 1.0)
+2026-03-10T01:30:44.6448538Z       csv (~> 3.0)
+2026-03-10T01:30:44.6448936Z       em-websocket (~> 0.5)
+2026-03-10T01:30:44.6449458Z       i18n (~> 1.0)
+2026-03-10T01:30:44.6449865Z       jekyll-sass-converter (>= 2.0, < 4.0)
+2026-03-10T01:30:44.6450368Z       jekyll-watch (~> 2.0)
+2026-03-10T01:30:44.6450748Z       json (~> 2.6)
+2026-03-10T01:30:44.6451081Z       kramdown (~> 2.3, >= 2.3.1)
+2026-03-10T01:30:44.6451492Z       kramdown-parser-gfm (~> 1.0)
+2026-03-10T01:30:44.6451895Z       liquid (~> 4.0)
+2026-03-10T01:30:44.6452251Z       mercenary (~> 0.3, >= 0.3.6)
+2026-03-10T01:30:44.6452678Z       pathutil (~> 0.9)
+2026-03-10T01:30:44.6453088Z       rouge (>= 3.0, < 5.0)
+2026-03-10T01:30:44.6453469Z       safe_yaml (~> 1.0)
+2026-03-10T01:30:44.6453845Z       terminal-table (>= 1.8, < 4.0)
+2026-03-10T01:30:44.6454260Z       webrick (~> 1.7)
+2026-03-10T01:30:44.6454647Z     jekyll-feed (0.17.0)
+2026-03-10T01:30:44.6455029Z       jekyll (>= 3.7, < 5.0)
+2026-03-10T01:30:44.6455500Z     jekyll-sass-converter (3.1.0)
+2026-03-10T01:30:44.6455954Z       sass-embedded (~> 1.75)
+2026-03-10T01:30:44.6456364Z     jekyll-seo-tag (2.8.0)
+2026-03-10T01:30:44.6456738Z       jekyll (>= 3.8, < 5.0)
+2026-03-10T01:30:44.6457127Z     jekyll-sitemap (1.4.0)
+2026-03-10T01:30:44.6457494Z       jekyll (>= 3.7, < 5.0)
+2026-03-10T01:30:44.6457884Z     jekyll-watch (2.2.1)
+2026-03-10T01:30:44.6458232Z       listen (~> 3.0)
+2026-03-10T01:30:44.6458571Z     json (2.19.1)
+2026-03-10T01:30:44.6458884Z     kramdown (2.5.2)
+2026-03-10T01:30:44.6459218Z       rexml (>= 3.4.4)
+2026-03-10T01:30:44.6459835Z     kramdown-parser-gfm (1.1.0)
+2026-03-10T01:30:44.6460234Z       kramdown (~> 2.0)
+2026-03-10T01:30:44.6460587Z     liquid (4.0.4)
+2026-03-10T01:30:44.6460912Z     listen (3.10.0)
+2026-03-10T01:30:44.6461241Z       logger
+2026-03-10T01:30:44.6461569Z       rb-fsevent (~> 0.10, >= 0.10.3)
+2026-03-10T01:30:44.6462027Z       rb-inotify (~> 0.9, >= 0.9.10)
+2026-03-10T01:30:44.6462430Z     logger (1.7.0)
+2026-03-10T01:30:44.6462754Z     mercenary (0.4.0)
+2026-03-10T01:30:44.6463106Z     pathutil (0.16.2)
+2026-03-10T01:30:44.6463526Z       forwardable-extended (~> 2.6)
+2026-03-10T01:30:44.6464017Z     public_suffix (7.0.5)
+2026-03-10T01:30:44.6464406Z     rake (13.3.1)
+2026-03-10T01:30:44.6464729Z     rb-fsevent (0.11.2)
+2026-03-10T01:30:44.6465027Z     rb-inotify (0.11.1)
+2026-03-10T01:30:44.6465230Z       ffi (~> 1.0)
+2026-03-10T01:30:44.6465409Z     rexml (3.4.4)
+2026-03-10T01:30:44.6465591Z     rouge (4.7.0)
+2026-03-10T01:30:44.6465768Z     safe_yaml (1.0.5)
+2026-03-10T01:30:44.6466060Z     sass-embedded (1.97.3)
+2026-03-10T01:30:44.6466337Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6466560Z       rake (>= 13)
+2026-03-10T01:30:44.6466786Z     sass-embedded (1.97.3-aarch64-linux-android)
+2026-03-10T01:30:44.6467095Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6467357Z     sass-embedded (1.97.3-aarch64-linux-gnu)
+2026-03-10T01:30:44.6467866Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6468136Z     sass-embedded (1.97.3-aarch64-linux-musl)
+2026-03-10T01:30:44.6468538Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6468810Z     sass-embedded (1.97.3-arm-linux-androideabi)
+2026-03-10T01:30:44.6469094Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6469636Z     sass-embedded (1.97.3-arm-linux-gnueabihf)
+2026-03-10T01:30:44.6469918Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6470312Z     sass-embedded (1.97.3-arm-linux-musleabihf)
+2026-03-10T01:30:44.6470593Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6470835Z     sass-embedded (1.97.3-arm64-darwin)
+2026-03-10T01:30:44.6471091Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6471349Z     sass-embedded (1.97.3-riscv64-linux-android)
+2026-03-10T01:30:44.6471628Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6471865Z     sass-embedded (1.97.3-riscv64-linux-gnu)
+2026-03-10T01:30:44.6472127Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6472381Z     sass-embedded (1.97.3-riscv64-linux-musl)
+2026-03-10T01:30:44.6472648Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6472884Z     sass-embedded (1.97.3-x86_64-darwin)
+2026-03-10T01:30:44.6473139Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6473393Z     sass-embedded (1.97.3-x86_64-linux-android)
+2026-03-10T01:30:44.6473656Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6473953Z     sass-embedded (1.97.3-x86_64-linux-gnu)
+2026-03-10T01:30:44.6474278Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6474521Z     sass-embedded (1.97.3-x86_64-linux-musl)
+2026-03-10T01:30:44.6474778Z       google-protobuf (~> 4.31)
+2026-03-10T01:30:44.6475020Z     terminal-table (3.0.2)
+2026-03-10T01:30:44.6475291Z       unicode-display_width (>= 1.1.1, < 3)
+2026-03-10T01:30:44.6475565Z     unicode-display_width (2.6.0)
+2026-03-10T01:30:44.6475807Z     webrick (1.9.2)
+2026-03-10T01:30:44.6475928Z 
+2026-03-10T01:30:44.6476013Z PLATFORMS
+2026-03-10T01:30:44.6476207Z   aarch64-linux-android
+2026-03-10T01:30:44.6476415Z   aarch64-linux-gnu
+2026-03-10T01:30:44.6476617Z   aarch64-linux-musl
+2026-03-10T01:30:44.6476820Z   arm-linux-androideabi
+2026-03-10T01:30:44.6477038Z   arm-linux-gnu
+2026-03-10T01:30:44.6477234Z   arm-linux-gnueabihf
+2026-03-10T01:30:44.6477511Z   arm-linux-musl
+2026-03-10T01:30:44.6477756Z   arm-linux-musleabihf
+2026-03-10T01:30:44.6477955Z   arm64-darwin
+2026-03-10T01:30:44.6478148Z   riscv64-linux-android
+2026-03-10T01:30:44.6478352Z   riscv64-linux-gnu
+2026-03-10T01:30:44.6478548Z   riscv64-linux-musl
+2026-03-10T01:30:44.6478732Z   ruby
+2026-03-10T01:30:44.6478906Z   x86-linux-gnu
+2026-03-10T01:30:44.6479088Z   x86-linux-musl
+2026-03-10T01:30:44.6479823Z   x86_64-darwin
+2026-03-10T01:30:44.6480050Z   x86_64-linux-android
+2026-03-10T01:30:44.6480257Z   x86_64-linux-gnu
+2026-03-10T01:30:44.6480448Z   x86_64-linux-musl
+2026-03-10T01:30:44.6480561Z 
+2026-03-10T01:30:44.6480641Z DEPENDENCIES
+2026-03-10T01:30:44.6480825Z   jekyll (~> 4.3)
+2026-03-10T01:30:44.6481015Z   jekyll-feed
+2026-03-10T01:30:44.6481200Z   jekyll-seo-tag
+2026-03-10T01:30:44.6481386Z   jekyll-sitemap
+2026-03-10T01:30:44.6481501Z 
+2026-03-10T01:30:44.6481584Z CHECKSUMS
+2026-03-10T01:30:44.6481972Z   addressable (2.8.9) sha256=cc154fcbe689711808a43601dee7b980238ce54368d23e127421753e46895485
+2026-03-10T01:30:44.6482595Z   base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
+2026-03-10T01:30:44.6483191Z   bigdecimal (4.0.1) sha256=8b07d3d065a9f921c80ceaea7c9d4ae596697295b584c296fe599dd0ad01c4a7
+2026-03-10T01:30:44.6483796Z   colorator (1.1.0) sha256=e2f85daf57af47d740db2a32191d1bdfb0f6503a0dfbc8327d0c9154d5ddfc38
+2026-03-10T01:30:44.6484749Z   concurrent-ruby (1.3.6) sha256=6b56837e1e7e5292f9864f34b69c5a2cbc75c0cf5338f1ce9903d10fa762d5ab
+2026-03-10T01:30:44.6485690Z   csv (3.3.5) sha256=6e5134ac3383ef728b7f02725d9872934f523cb40b961479f69cf3afa6c8e73f
+2026-03-10T01:30:44.6486284Z   em-websocket (0.5.3) sha256=f56a92bde4e6cb879256d58ee31f124181f68f8887bd14d53d5d9a292758c6a8
+2026-03-10T01:30:44.6487202Z   eventmachine (1.2.7) sha256=994016e42aa041477ba9cff45cbe50de2047f25dd418eba003e84f0d16560972
+2026-03-10T01:30:44.6488352Z   ffi (1.17.3) sha256=0e9f39f7bb3934f77ad6feab49662be77e87eedcdeb2a3f5c0234c2938563d4c
+2026-03-10T01:30:44.6489016Z   ffi (1.17.3-aarch64-linux-gnu) sha256=28ad573df26560f0aedd8a90c3371279a0b2bd0b4e834b16a2baa10bd7a97068
+2026-03-10T01:30:44.6489952Z   ffi (1.17.3-aarch64-linux-musl) sha256=020b33b76775b1abacc3b7d86b287cef3251f66d747092deec592c7f5df764b2
+2026-03-10T01:30:44.6490674Z   ffi (1.17.3-arm-linux-gnu) sha256=5bd4cea83b68b5ec0037f99c57d5ce2dd5aa438f35decc5ef68a7d085c785668
+2026-03-10T01:30:44.6491352Z   ffi (1.17.3-arm-linux-musl) sha256=0d7626bb96265f9af78afa33e267d71cfef9d9a8eb8f5525344f8da6c7d76053
+2026-03-10T01:30:44.6492047Z   ffi (1.17.3-arm64-darwin) sha256=0c690555d4cee17a7f07c04d59df39b2fba74ec440b19da1f685c6579bb0717f
+2026-03-10T01:30:44.6492717Z   ffi (1.17.3-x86-linux-gnu) sha256=868a88fcaf5186c3a46b7c7c2b2c34550e1e61a405670ab23f5b6c9971529089
+2026-03-10T01:30:44.6493389Z   ffi (1.17.3-x86-linux-musl) sha256=f0286aa6ef40605cf586e61406c446de34397b85dbb08cc99fdaddaef8343945
+2026-03-10T01:30:44.6494054Z   ffi (1.17.3-x86_64-darwin) sha256=1f211811eb5cfaa25998322cdd92ab104bfbd26d1c4c08471599c511f2c00bb5
+2026-03-10T01:30:44.6494715Z   ffi (1.17.3-x86_64-linux-gnu) sha256=3746b01f677aae7b16dc1acb7cb3cc17b3e35bdae7676a3f568153fb0e2c887f
+2026-03-10T01:30:44.6495839Z   ffi (1.17.3-x86_64-linux-musl) sha256=086b221c3a68320b7564066f46fed23449a44f7a1935f1fe5a245bd89d9aea56
+2026-03-10T01:30:44.6496738Z   forwardable-extended (2.6.0) sha256=1bec948c469bbddfadeb3bd90eb8c85f6e627a412a3e852acfd7eaedbac3ec97
+2026-03-10T01:30:44.6497429Z   google-protobuf (4.34.0) sha256=bffaea30fbe2807c80667a78953b15645b3bef62b25c10ca187e4418119be531
+2026-03-10T01:30:44.6498171Z   google-protobuf (4.34.0-aarch64-linux-gnu) sha256=0ab8a8a97976a2265d647e69b3ff1980c89184abdaf06d36091856c5ab37cc55
+2026-03-10T01:30:44.6498986Z   google-protobuf (4.34.0-aarch64-linux-musl) sha256=0632a86df6d320eac3b335bd779499d43ad8ee6d1f8c8494b773ed5d3d5c6ab4
+2026-03-10T01:30:44.6500046Z   google-protobuf (4.34.0-arm64-darwin) sha256=f83967a8095a9da676b79ba372c58fef2ca3878428bd40febfce65b3752c90d1
+2026-03-10T01:30:44.6500821Z   google-protobuf (4.34.0-x86-linux-gnu) sha256=21108e5cee407cb46c38f96fa93ea1ea8e463a45c8031261df3f9131458db4e3
+2026-03-10T01:30:44.6501601Z   google-protobuf (4.34.0-x86-linux-musl) sha256=58cb40ce43e2dc559eef112ff8d522aad489ba90f693eb95fdd946eaa6cc81e9
+2026-03-10T01:30:44.6502367Z   google-protobuf (4.34.0-x86_64-darwin) sha256=4a5b67281993345adca54bb32947f25a289597eafaa240e5b714d0a740f99321
+2026-03-10T01:30:44.6503128Z   google-protobuf (4.34.0-x86_64-linux-gnu) sha256=bbb333fbe79c16f35a2e2154cf29f3ce26f60390dba286b339861206d5435ef9
+2026-03-10T01:30:44.6503914Z   google-protobuf (4.34.0-x86_64-linux-musl) sha256=0b75858a388b17e73aa4176df2e722762dbc92551b7075fdc562d33c1c6de0b0
+2026-03-10T01:30:44.6504628Z   http_parser.rb (0.8.1) sha256=9ae8df145b39aa5398b2f90090d651c67bd8e2ebfe4507c966579f641e11097a
+2026-03-10T01:30:44.6505219Z   i18n (1.14.8) sha256=285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5
+2026-03-10T01:30:44.6505778Z   jekyll (4.4.1) sha256=4c1144d857a5b2b80d45b8cf5138289579a9f8136aadfa6dd684b31fe2bc18c1
+2026-03-10T01:30:44.6506375Z   jekyll-feed (0.17.0) sha256=689aab16c877949bb9e7a5c436de6278318a51ecb974792232fd94d8b3acfcc3
+2026-03-10T01:30:44.6507027Z   jekyll-sass-converter (3.1.0) sha256=83925d84f1d134410c11d0c6643b0093e82e3a3cf127e90757a85294a3862443
+2026-03-10T01:30:44.6507704Z   jekyll-seo-tag (2.8.0) sha256=3f2ed1916d56f14ebfa38e24acde9b7c946df70cb183af2cb5f0598f21ae6818
+2026-03-10T01:30:44.6508374Z   jekyll-sitemap (1.4.0) sha256=0de08c5debc185ea5a8f980e1025c7cd3f8e0c35c8b6ef592f15c46235cf4218
+2026-03-10T01:30:44.6509006Z   jekyll-watch (2.2.1) sha256=bc44ed43f5e0a552836245a54dbff3ea7421ecc2856707e8a1ee203a8387a7e1
+2026-03-10T01:30:44.6509843Z   json (2.19.1) sha256=dd94fdc59e48bff85913829a32350b3148156bc4fd2a95a2568a78b11344082d
+2026-03-10T01:30:44.6510581Z   kramdown (2.5.2) sha256=1ba542204c66b6f9111ff00dcc26075b95b220b07f2905d8261740c82f7f02fa
+2026-03-10T01:30:44.6511208Z   kramdown-parser-gfm (1.1.0) sha256=fb39745516427d2988543bf01fc4cf0ab1149476382393e0e9c48592f6581729
+2026-03-10T01:30:44.6512006Z   liquid (4.0.4) sha256=4fcfebb1a045e47918388dbb7a0925e7c3893e58d2bd6c3b3c73ec17a2d8fdb3
+2026-03-10T01:30:44.6512570Z   listen (3.10.0) sha256=c6e182db62143aeccc2e1960033bebe7445309c7272061979bb098d03760c9d2
+2026-03-10T01:30:44.6513134Z   logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
+2026-03-10T01:30:44.6513708Z   mercenary (0.4.0) sha256=b25a1e4a59adca88665e08e24acf0af30da5b5d859f7d8f38fba52c28f405138
+2026-03-10T01:30:44.6514299Z   pathutil (0.16.2) sha256=e43b74365631cab4f6d5e4228f812927efc9cb2c71e62976edcb252ee948d589
+2026-03-10T01:30:44.6514916Z   public_suffix (7.0.5) sha256=1a8bb08f1bbea19228d3bed6e5ed908d1cb4f7c2726d18bd9cadf60bc676f623
+2026-03-10T01:30:44.6515511Z   rake (13.3.1) sha256=8c9e89d09f66a26a01264e7e3480ec0607f0c497a861ef16063604b1b08eb19c
+2026-03-10T01:30:44.6516084Z   rb-fsevent (0.11.2) sha256=43900b972e7301d6570f64b850a5aa67833ee7d87b458ee92805d56b7318aefe
+2026-03-10T01:30:44.6516673Z   rb-inotify (0.11.1) sha256=a0a700441239b0ff18eb65e3866236cd78613d6b9f78fea1f9ac47a85e47be6e
+2026-03-10T01:30:44.6517246Z   rexml (3.4.4) sha256=19e0a2c3425dfbf2d4fc1189747bdb2f849b6c5e74180401b15734bc97b5d142
+2026-03-10T01:30:44.6517786Z   rouge (4.7.0) sha256=dba5896715c0325c362e895460a6d350803dbf6427454f49a47500f3193ea739
+2026-03-10T01:30:44.6518345Z   safe_yaml (1.0.5) sha256=a6ac2d64b7eb027bdeeca1851fe7e7af0d668e133e8a88066a0c6f7087d9f848
+2026-03-10T01:30:44.6518961Z   sass-embedded (1.97.3) sha256=c4136da69ae3acfa7b0809f4ec10891125edf57df214a2d1ab570f721f96f7a6
+2026-03-10T01:30:44.6519935Z   sass-embedded (1.97.3-aarch64-linux-android) sha256=623b2f52fed6e3696c6445406e4efaef57b54442cc35604bfffbb82aef7d5c45
+2026-03-10T01:30:44.6520749Z   sass-embedded (1.97.3-aarch64-linux-gnu) sha256=81915bb19ce7e224eae534e75e828f4ab5acddcb17e54da0b5ef91d932462836
+2026-03-10T01:30:44.6521531Z   sass-embedded (1.97.3-aarch64-linux-musl) sha256=508c92fa2f9e58f9072325e02f011bd22c7e428465c67fafaee570d0bc40563b
+2026-03-10T01:30:44.6522333Z   sass-embedded (1.97.3-arm-linux-androideabi) sha256=e2ef33b187066e09374023e58e72cf3b5baabe6b77ecd74356fe9b4892a1c6e1
+2026-03-10T01:30:44.6523129Z   sass-embedded (1.97.3-arm-linux-gnueabihf) sha256=ce443b57f3d7f03740267cf0f2cdff13e8055dd5938488967746f29f230222da
+2026-03-10T01:30:44.6523912Z   sass-embedded (1.97.3-arm-linux-musleabihf) sha256=be3972424616f916ce1f4f41228266d57339e490dfd7ca0cea5588579564d4c0
+2026-03-10T01:30:44.6524662Z   sass-embedded (1.97.3-arm64-darwin) sha256=8897d3503efe75c30584070a7104095545f5157665029aeb9bff3fa533a73861
+2026-03-10T01:30:44.6525419Z   sass-embedded (1.97.3-riscv64-linux-android) sha256=201426b3e58611aa8cf34a7574df51905ec42fefb5a69982cc8497ac7fb26a6b
+2026-03-10T01:30:44.6526207Z   sass-embedded (1.97.3-riscv64-linux-gnu) sha256=d7bac32f4de55c589a036da13ac4482bf5b7dfac980b4c0203d31a1bd9f07622
+2026-03-10T01:30:44.6526989Z   sass-embedded (1.97.3-riscv64-linux-musl) sha256=621d981d700e2b8d0459b5ea696fff746dfa07d6b6bbc70cd982905214b07888
+2026-03-10T01:30:44.6527741Z   sass-embedded (1.97.3-x86_64-darwin) sha256=578f167907ee2a4d355a5a40bcf35d2e3eb90c87008dcd9ce31a2c4a877697f6
+2026-03-10T01:30:44.6528505Z   sass-embedded (1.97.3-x86_64-linux-android) sha256=8f5e179bee8610be432499f228ea4e53ab362b1db0da1ae3cd3e76b114712372
+2026-03-10T01:30:44.6529394Z   sass-embedded (1.97.3-x86_64-linux-gnu) sha256=173a4d0dbe2fffdf7482bd3e82fb597dfc658c18d1e8fd746aa7d5077ed4e850
+2026-03-10T01:30:44.6530155Z   sass-embedded (1.97.3-x86_64-linux-musl) sha256=fcc0dcb253ef174ea25283f8781ce9ce95a492663f4bdbb1d66bfae99267a9f7
+2026-03-10T01:30:44.6530853Z   terminal-table (3.0.2) sha256=f951b6af5f3e00203fb290a669e0a85c5dd5b051b3b023392ccfd67ba5abae91
+2026-03-10T01:30:44.6531509Z   unicode-display_width (2.6.0) sha256=12279874bba6d5e4d2728cef814b19197dbb10d7a7837a869bab65da943b7f5a
+2026-03-10T01:30:44.6532315Z   webrick (1.9.2) sha256=beb4a15fc474defed24a3bda4ffd88a490d517c9e4e6118c3edce59e45864131
+2026-03-10T01:30:44.6532675Z 
+2026-03-10T01:30:44.6532905Z BUNDLED WITH
+2026-03-10T01:30:44.6533082Z   4.0.7
+2026-03-10T01:30:44.6533618Z ##[endgroup]
+2026-03-10T01:30:44.6534611Z Cache key: setup-ruby-bundler-cache-v6-ubuntu-24.04-x64-ruby-3.3.10-wd-/home/runner/work/anaveo.github.io/anaveo.github.io-with--without--only--Gemfile.lock-01c25d158c5a9d9ba8d055f214882afe77241c01c17657e41b436796dfe4e8d8
+2026-03-10T01:30:44.7814192Z Cache hit for: setup-ruby-bundler-cache-v6-ubuntu-24.04-x64-ruby-3.3.10-wd-/home/runner/work/anaveo.github.io/anaveo.github.io-with--without--only--Gemfile.lock-01c25d158c5a9d9ba8d055f214882afe77241c01c17657e41b436796dfe4e8d8
+2026-03-10T01:30:45.3343312Z Received 18963519 of 18963519 (100.0%), 42.0 MBs/sec
+2026-03-10T01:30:45.3343983Z Cache Size: ~18 MB (18963519 B)
+2026-03-10T01:30:45.3375952Z [command]/usr/bin/tar -xf /home/runner/work/_temp/7223adad-61b2-42c3-b625-b77c44c45659/cache.tzst -P -C /home/runner/work/anaveo.github.io/anaveo.github.io --use-compress-program unzstd
+2026-03-10T01:30:45.4906448Z Cache restored successfully
+2026-03-10T01:30:45.4949092Z Found cache for key: setup-ruby-bundler-cache-v6-ubuntu-24.04-x64-ruby-3.3.10-wd-/home/runner/work/anaveo.github.io/anaveo.github.io-with--without--only--Gemfile.lock-01c25d158c5a9d9ba8d055f214882afe77241c01c17657e41b436796dfe4e8d8
+2026-03-10T01:30:45.4966197Z [command]/opt/hostedtoolcache/Ruby/3.3.10/x64/bin/bundle install --jobs 4
+2026-03-10T01:30:45.8035663Z Bundle complete! 4 Gemfile dependencies, 38 gems now installed.
+2026-03-10T01:30:45.8057401Z Bundled gems are installed into `./vendor/bundle`
+2026-03-10T01:30:45.8187652Z Took   1.53 seconds
+2026-03-10T01:30:45.8304532Z ##[group]Run bundle exec jekyll build
+2026-03-10T01:30:45.8304873Z [36;1mbundle exec jekyll build[0m
+2026-03-10T01:30:45.8361212Z shell: /usr/bin/bash -e {0}
+2026-03-10T01:30:45.8361460Z env:
+2026-03-10T01:30:45.8361645Z   JEKYLL_ENV: production
+2026-03-10T01:30:45.8361867Z ##[endgroup]
+2026-03-10T01:30:46.8328802Z Configuration file: /home/runner/work/anaveo.github.io/anaveo.github.io/_config.yml
+2026-03-10T01:30:46.8646924Z             Source: /home/runner/work/anaveo.github.io/anaveo.github.io
+2026-03-10T01:30:46.8647553Z        Destination: /home/runner/work/anaveo.github.io/anaveo.github.io/_site
+2026-03-10T01:30:46.8648122Z  Incremental build: disabled. Enable with --incremental
+2026-03-10T01:30:46.8648529Z       Generating... 
+2026-03-10T01:30:46.8894822Z        Jekyll Feed: Generating feed for posts
+2026-03-10T01:30:47.0680436Z                     done in 0.203 seconds.
+2026-03-10T01:30:47.0681055Z  Auto-regeneration: disabled. Use --watch to enable.
+2026-03-10T01:30:47.0869864Z ##[group]Run actions/upload-pages-artifact@v3
+2026-03-10T01:30:47.0870205Z with:
+2026-03-10T01:30:47.0870379Z   path: _site
+2026-03-10T01:30:47.0870567Z   name: github-pages
+2026-03-10T01:30:47.0870774Z   retention-days: 1
+2026-03-10T01:30:47.0870957Z ##[endgroup]
+2026-03-10T01:30:47.0947829Z ##[group]Run echo ::group::Archive artifact
+2026-03-10T01:30:47.0948156Z [36;1mecho ::group::Archive artifact[0m
+2026-03-10T01:30:47.0948422Z [36;1mtar \[0m
+2026-03-10T01:30:47.0948665Z [36;1m  --dereference --hard-dereference \[0m
+2026-03-10T01:30:47.0948969Z [36;1m  --directory "$INPUT_PATH" \[0m
+2026-03-10T01:30:47.0949250Z [36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \[0m
+2026-03-10T01:30:47.0949860Z [36;1m  --exclude=.git \[0m
+2026-03-10T01:30:47.0950091Z [36;1m  --exclude=.github \[0m
+2026-03-10T01:30:47.0950318Z [36;1m  .[0m
+2026-03-10T01:30:47.0950502Z [36;1mecho ::endgroup::[0m
+2026-03-10T01:30:47.0992842Z shell: /usr/bin/sh -e {0}
+2026-03-10T01:30:47.0993095Z env:
+2026-03-10T01:30:47.0993305Z   INPUT_PATH: _site
+2026-03-10T01:30:47.0993503Z ##[endgroup]
+2026-03-10T01:30:47.1049199Z ##[group]Archive artifact
+2026-03-10T01:30:47.1063120Z ./
+2026-03-10T01:30:47.1063460Z ./assets/
+2026-03-10T01:30:47.1063752Z ./assets/img/
+2026-03-10T01:30:47.1064086Z ./assets/img/projects/
+2026-03-10T01:30:47.1064319Z ./assets/img/projects/omnipet/
+2026-03-10T01:30:47.1064586Z ./assets/img/projects/omnipet/feeding.jpg
+2026-03-10T01:30:47.1066341Z ./assets/img/projects/omnipet/construction_1.jpg
+2026-03-10T01:30:47.1076652Z ./assets/img/projects/omnipet/flowchart.jpg
+2026-03-10T01:30:47.1077112Z ./assets/img/projects/omnipet/construction_2.jpg
+2026-03-10T01:30:47.1083569Z ./assets/img/projects/cosmopilot/
+2026-03-10T01:30:47.1084014Z ./assets/img/projects/cosmopilot/cosmopilot.jpg
+2026-03-10T01:30:47.1084347Z ./assets/img/projects/cosmopilot/app_mockup.png
+2026-03-10T01:30:47.1117885Z ./assets/img/projects/cosmopilot/mars_2.jpg
+2026-03-10T01:30:47.1141160Z ./assets/img/projects/cosmopilot/mars_1.jpg
+2026-03-10T01:30:47.1152746Z ./assets/img/projects/sol/
+2026-03-10T01:30:47.1153178Z ./assets/img/projects/sol/sol.jpg
+2026-03-10T01:30:47.1154905Z ./assets/img/projects/sol/construction_1.jpg
+2026-03-10T01:30:47.1156498Z ./assets/img/projects/sol/prototype.jpg
+2026-03-10T01:30:47.1159213Z ./assets/img/projects/sol/circuit.jpg
+2026-03-10T01:30:47.1160809Z ./assets/img/projects/sol/schematic.jpg
+2026-03-10T01:30:47.1161734Z ./assets/img/projects/sol/construction_2.jpg
+2026-03-10T01:30:47.1163211Z ./assets/img/projects/gestr/
+2026-03-10T01:30:47.1163519Z ./assets/img/projects/gestr/gestr.jpg
+2026-03-10T01:30:47.1164029Z ./assets/img/projects/kitt/
+2026-03-10T01:30:47.1164273Z ./assets/img/projects/kitt/drawing.jpg
+2026-03-10T01:30:47.1164671Z ./assets/img/projects/kitt/cad.jpg
+2026-03-10T01:30:47.1167618Z ./assets/img/projects/kitt/andrew_wiring.jpg
+2026-03-10T01:30:47.1168208Z ./assets/img/projects/kitt/chassis_top.jpg
+2026-03-10T01:30:47.1170359Z ./assets/img/projects/kitt/sensor_layout.jpg
+2026-03-10T01:30:47.1170672Z ./assets/img/projects/kitt/kitt.jpg
+2026-03-10T01:30:47.1172389Z ./assets/img/projects/kitt/debugging.jpg
+2026-03-10T01:30:47.1174318Z ./assets/img/projects/kitt/chassis_side.jpg
+2026-03-10T01:30:47.1175886Z ./assets/img/projects/kitt/sensors.jpg
+2026-03-10T01:30:47.1176381Z ./assets/img/projects/kitt/render.jpg
+2026-03-10T01:30:47.1177041Z ./assets/img/projects/glo_r2/
+2026-03-10T01:30:47.1177486Z ./assets/img/projects/glo_r2/glo_r2.jpg
+2026-03-10T01:30:47.1178188Z ./assets/img/projects/aria_mk1/
+2026-03-10T01:30:47.1178713Z ./assets/img/projects/aria_mk1/folded_with_bottle.png
+2026-03-10T01:30:47.1180201Z ./assets/img/projects/aria_mk1/aria_mk1.jpg
+2026-03-10T01:30:47.1181287Z ./assets/img/projects/aria_mk1/cad.jpg
+2026-03-10T01:30:47.1184371Z ./assets/img/projects/aria_mk1/system_diagram.jpg
+2026-03-10T01:30:47.1184952Z ./assets/img/projects/aria_mk1/assembly_2.jpg
+2026-03-10T01:30:47.1186430Z ./assets/img/projects/aria_mk1/internals.jpg
+2026-03-10T01:30:47.1187424Z ./assets/img/projects/aria_mk1/parts.jpg
+2026-03-10T01:30:47.1191441Z ./assets/img/projects/aria_mk1/outdoor_testing.jpg
+2026-03-10T01:30:47.1193448Z ./assets/img/projects/aria_mk1/front.jpg
+2026-03-10T01:30:47.1193982Z ./assets/img/projects/aria_mk1/electronics.jpg
+2026-03-10T01:30:47.1196094Z ./assets/img/projects/aria_mk1/assembly_1.jpg
+2026-03-10T01:30:47.1198279Z ./assets/img/projects/aria_mk1/front_transparent.png
+2026-03-10T01:30:47.1199915Z ./assets/img/projects/saltscale/
+2026-03-10T01:30:47.1200424Z ./assets/img/projects/saltscale/saltscale.jpg
+2026-03-10T01:30:47.1202348Z ./assets/img/projects/do_droid/
+2026-03-10T01:30:47.1202836Z ./assets/img/projects/do_droid/drive_system.jpg
+2026-03-10T01:30:47.1203379Z ./assets/img/projects/do_droid/dual_axis.jpg
+2026-03-10T01:30:47.1204526Z ./assets/img/projects/do_droid/electronics.jpg
+2026-03-10T01:30:47.1205360Z ./assets/img/projects/do_droid/do_droid.jpg
+2026-03-10T01:30:47.1206148Z ./assets/img/projects/lazr/
+2026-03-10T01:30:47.1206441Z ./assets/img/projects/lazr/bare_pcb.jpg
+2026-03-10T01:30:47.1207346Z ./assets/img/projects/lazr/lazr.jpg
+2026-03-10T01:30:47.1208803Z ./assets/img/projects/lazr/assembled_pcb.jpg
+2026-03-10T01:30:47.1210595Z ./assets/img/projects/lazr/schematic.jpg
+2026-03-10T01:30:47.1211732Z ./assets/img/projects/lazr/thumbs_up.jpg
+2026-03-10T01:30:47.1212877Z ./assets/img/projects/lazr/layout.jpg
+2026-03-10T01:30:47.1215209Z ./assets/img/projects/glo_r1/
+2026-03-10T01:30:47.1215661Z ./assets/img/projects/glo_r1/rainbow.jpg
+2026-03-10T01:30:47.1216470Z ./assets/img/projects/glo_r1/assembled_pcbs.jpg
+2026-03-10T01:30:47.1241755Z ./assets/img/projects/glo_r1/banner.jpg
+2026-03-10T01:30:47.1244423Z ./assets/img/projects/glo_r1/render.png
+2026-03-10T01:30:47.1245767Z ./assets/img/projects/glo_r1/labeled_diagram.jpg
+2026-03-10T01:30:47.1246606Z ./assets/img/projects/glo_r1/top.jpg
+2026-03-10T01:30:47.1250150Z ./assets/img/projects/glo_r1/processor_schematic.jpg
+2026-03-10T01:30:47.1251887Z ./assets/img/projects/glo_r1/cross.jpg
+2026-03-10T01:30:47.1255580Z ./assets/img/projects/glo_r1/glo_arduino.jpg
+2026-03-10T01:30:47.1259108Z ./assets/img/projects/glo_r1/layout.jpg
+2026-03-10T01:30:47.1262758Z ./assets/img/projects/automotiq/
+2026-03-10T01:30:47.1263269Z ./assets/img/projects/automotiq/automotiq.jpg
+2026-03-10T01:30:47.1263780Z ./assets/img/Om_Favicon_32x32.png
+2026-03-10T01:30:47.1264211Z ./assets/img/Profile_Pic.jpg
+2026-03-10T01:30:47.1265700Z ./assets/pdf/
+2026-03-10T01:30:47.1266070Z ./assets/pdf/Om_Anavekar_Resume_2025.pdf
+2026-03-10T01:30:47.1268229Z ./assets/css/
+2026-03-10T01:30:47.1268664Z ./assets/css/main.css.map
+2026-03-10T01:30:47.1269056Z ./assets/css/main.css
+2026-03-10T01:30:47.1269569Z ./projects/
+2026-03-10T01:30:47.1269882Z ./projects/omnipet/
+2026-03-10T01:30:47.1270241Z ./projects/omnipet/index.html
+2026-03-10T01:30:47.1270645Z ./projects/cosmopilot/
+2026-03-10T01:30:47.1271020Z ./projects/cosmopilot/index.html
+2026-03-10T01:30:47.1271567Z ./projects/sol/
+2026-03-10T01:30:47.1271911Z ./projects/sol/index.html
+2026-03-10T01:30:47.1272307Z ./projects/automotiq-ai/
+2026-03-10T01:30:47.1272698Z ./projects/automotiq-ai/index.html
+2026-03-10T01:30:47.1273111Z ./projects/gestr/
+2026-03-10T01:30:47.1273447Z ./projects/gestr/index.html
+2026-03-10T01:30:47.1273817Z ./projects/kitt/
+2026-03-10T01:30:47.1274139Z ./projects/kitt/index.html
+2026-03-10T01:30:47.1274507Z ./projects/aria-mk1/
+2026-03-10T01:30:47.1274858Z ./projects/aria-mk1/index.html
+2026-03-10T01:30:47.1275247Z ./projects/saltscale/
+2026-03-10T01:30:47.1275609Z ./projects/saltscale/index.html
+2026-03-10T01:30:47.1275994Z ./projects/glo-r1/
+2026-03-10T01:30:47.1276333Z ./projects/glo-r1/index.html
+2026-03-10T01:30:47.1276706Z ./projects/glo-r2/
+2026-03-10T01:30:47.1277039Z ./projects/glo-r2/index.html
+2026-03-10T01:30:47.1277407Z ./projects/lazr/
+2026-03-10T01:30:47.1277730Z ./projects/lazr/index.html
+2026-03-10T01:30:47.1278106Z ./projects/do-droid/
+2026-03-10T01:30:47.1278478Z ./projects/do-droid/index.html
+2026-03-10T01:30:47.1278838Z ./index.html
+2026-03-10T01:30:47.1279123Z ./sitemap.xml
+2026-03-10T01:30:47.1279925Z ./404.html
+2026-03-10T01:30:47.1280206Z ./about/
+2026-03-10T01:30:47.1280497Z ./about/index.html
+2026-03-10T01:30:47.1280713Z ./feed.xml
+2026-03-10T01:30:47.1280869Z ./robots.txt
+2026-03-10T01:30:47.1283752Z ##[endgroup]
+2026-03-10T01:30:47.1366954Z ##[group]Run actions/upload-artifact@v4
+2026-03-10T01:30:47.1367210Z with:
+2026-03-10T01:30:47.1367386Z   name: github-pages
+2026-03-10T01:30:47.1367614Z   path: /home/runner/work/_temp/artifact.tar
+2026-03-10T01:30:47.1367907Z   retention-days: 1
+2026-03-10T01:30:47.1368106Z   if-no-files-found: error
+2026-03-10T01:30:47.1368318Z   compression-level: 6
+2026-03-10T01:30:47.1368518Z   overwrite: false
+2026-03-10T01:30:47.1368715Z   include-hidden-files: false
+2026-03-10T01:30:47.1368935Z ##[endgroup]
+2026-03-10T01:30:47.3522819Z With the provided path, there will be 1 file uploaded
+2026-03-10T01:30:47.3527912Z Artifact name is valid!
+2026-03-10T01:30:47.3529786Z Root directory input is valid!
+2026-03-10T01:30:47.4683727Z Beginning upload of artifact content to blob storage
+2026-03-10T01:30:48.2375833Z Uploaded bytes 8388608
+2026-03-10T01:30:48.4784247Z Uploaded bytes 16777216
+2026-03-10T01:30:48.5658811Z Uploaded bytes 18780535
+2026-03-10T01:30:48.6043574Z Finished uploading artifact content to blob storage!
+2026-03-10T01:30:48.6046602Z SHA256 digest of uploaded artifact zip is c03225069b03abbce47cdde275ceb1dd0906a4340d874d8801307238562022dc
+2026-03-10T01:30:48.6048694Z Finalizing artifact upload
+2026-03-10T01:30:48.7223461Z Artifact github-pages.zip successfully finalized. Artifact ID 5841461999
+2026-03-10T01:30:48.7224835Z Artifact github-pages has been successfully uploaded! Final size is 18780535 bytes. Artifact ID is 5841461999
+2026-03-10T01:30:48.7232439Z Artifact download URL: https://github.com/anaveo/anaveo.github.io/actions/runs/22882855676/artifacts/5841461999
+2026-03-10T01:30:48.7458281Z Post job cleanup.
+2026-03-10T01:30:48.8407974Z [command]/usr/bin/git version
+2026-03-10T01:30:48.8446110Z git version 2.53.0
+2026-03-10T01:30:48.8488759Z Temporarily overriding HOME='/home/runner/work/_temp/c0c10c01-a4a6-449c-b18a-c28b95cb4c8f' before making global git config changes
+2026-03-10T01:30:48.8490221Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-10T01:30:48.8501942Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/anaveo.github.io/anaveo.github.io
+2026-03-10T01:30:48.8536608Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-10T01:30:48.8570590Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-10T01:30:48.8810819Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-10T01:30:48.8831927Z http.https://github.com/.extraheader
+2026-03-10T01:30:48.8844166Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-10T01:30:48.8875371Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-10T01:30:48.9109974Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-10T01:30:48.9142464Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-10T01:30:48.9512100Z Cleaning up orphan processes

@@ -31,15 +31,19 @@
 }
 
 .nav-brand {
-  font-size: var(--text-base);
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: -0.01em;
-  transition: color var(--ease);
+  display: flex;
+  align-items: center;
+  transition: opacity var(--ease);
 
   &:hover {
-    color: var(--accent);
+    opacity: 0.8;
   }
+}
+
+.nav-logo {
+  height: 32px;
+  width: 32px;
+  display: block;
 }
 
 .nav-links {

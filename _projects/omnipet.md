@@ -3,6 +3,7 @@ layout: project
 title: OmniPet
 description: An automated pet feeder.
 img: assets/img/projects/omnipet/feeding.jpg
+date: 2016-01-01
 importance: 5
 category: just for fun
 ---

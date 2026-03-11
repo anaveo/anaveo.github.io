@@ -3,6 +3,7 @@ layout: project
 title: D-O Droid
 description: A companion bot inspired by the popular Star Wars droid.
 img: assets/img/projects/do_droid/do_droid.jpg
+date: 2021-06-01
 importance: 4
 category: just for fun
 ---

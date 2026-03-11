@@ -7,6 +7,7 @@ img: assets/img/projects/cosmopilot/cosmopilot.jpg
 # banner_title: ""
 # banner_description: ""
 # overlay: false
+date: 2022-10-01
 importance: 2
 category: just for fun
 ---

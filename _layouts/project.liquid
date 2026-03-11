@@ -3,35 +3,216 @@ layout: default
 ---
 <div class="page-project">
 
-  <!-- Header -->
-  <header class="project-header">
-    <nav class="project-breadcrumb" aria-label="Breadcrumb">
-      <a href="{{ site.baseurl }}/">Projects</a>
-      <span aria-hidden="true">/</span>
-      <span>{{ page.title }}</span>
-    </nav>
-    {% if page.category %}
-      <p class="project-category">{{ page.category }}</p>
-    {% endif %}
-    <h1 class="project-title">{{ page.title }}</h1>
-    {% if page.description %}
-      <p class="project-description">{{ page.description }}</p>
-    {% endif %}
-  </header>
+  <!-- Breadcrumb -->
+  <div class="project-breadcrumb-bar">
+    <div class="project-breadcrumb-inner">
+      <nav class="project-breadcrumb" aria-label="Breadcrumb">
+        <a href="{{ site.baseurl }}/projects/">Projects</a>
+        <span aria-hidden="true">/</span>
+        <span>{{ page.title }}</span>
+      </nav>
+    </div>
+  </div>
 
-  <!-- Hero image -->
-  {% if page.img %}
-    <div class="project-hero-img">
-      <img src="{{ page.img | relative_url }}" alt="{{ page.title }}" loading="eager">
+  <!-- Banner -->
+  {% assign banner_src = page.banner | default: page.img %}
+  {% if banner_src %}
+    <div class="project-banner">
+      <img src="{{ banner_src | relative_url }}" alt="{{ page.title }}" loading="eager">
     </div>
   {% endif %}
 
-  <!-- Content -->
-  <div class="project-content prose">
-    {{ content }}
-  </div>
+  <!-- Header -->
+  <header class="project-header">
+    <div class="project-header-inner">
 
-  <!-- Back link -->
-  <a href="{{ site.baseurl }}/" class="back-to-projects">← All Projects</a>
+      <h1 class="project-title">{{ page.title }}</h1>
+
+      {% if page.tagline %}
+        <p class="project-tagline">{{ page.tagline }}</p>
+      {% endif %}
+
+      {% if page.description %}
+        <p class="project-description">{{ page.description }}</p>
+      {% endif %}
+
+      <!-- Links -->
+      {% assign all_links = page.links %}
+      {% if all_links %}
+        <div class="project-links">
+          {% for link in all_links %}
+            <a href="{{ link.url }}"
+               class="project-link-pill"
+               target="_blank"
+               rel="noopener noreferrer"
+               {% if link.color %}style="--pill-color: {{ link.color }};"{% endif %}>
+              {{ link.label }} ↗
+            </a>
+          {% endfor %}
+        </div>
+      {% elsif page.external_url %}
+        <div class="project-links">
+          <a href="{{ page.external_url }}" class="project-link-pill" target="_blank" rel="noopener noreferrer">
+            View Project ↗
+          </a>
+        </div>
+      {% endif %}
+
+      <!-- Highlights / Stats -->
+      {% if page.highlights %}
+        <div class="project-highlights">
+          {% for h in page.highlights %}
+            <div class="project-highlight">
+              <span class="highlight-value">{{ h.value }}</span>
+              <span class="highlight-label">{{ h.label }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+    </div>
+  </header>
+
+  <!-- Sections (data-driven) -->
+  {% if page.sections %}
+    <div class="project-sections">
+      {% for section in page.sections %}
+        <section class="project-section">
+
+          {% if section.title %}
+            <h2 class="section-title">{{ section.title }}</h2>
+          {% endif %}
+
+          {% if section.image %}
+
+            <!-- Split: text left, image right -->
+            <div class="section-split">
+              {% if section.text %}
+                <div class="section-text">{{ section.text | markdownify }}</div>
+              {% endif %}
+              <figure class="section-image">
+                <img
+                  src="{{ section.image | relative_url }}"
+                  alt="{{ section.image_caption | default: section.title | default: page.title }}"
+                  loading="lazy"
+                  class="lightbox-trigger"
+                >
+                {% if section.image_caption %}
+                  <figcaption>{{ section.image_caption }}</figcaption>
+                {% endif %}
+              </figure>
+            </div>
+
+          {% elsif section.full_image %}
+
+            <!-- Stacked: text above, full-width image below -->
+            {% if section.text %}
+              <div class="section-text section-text--wide">{{ section.text | markdownify }}</div>
+            {% endif %}
+            <figure class="section-full-image">
+              <img
+                src="{{ section.full_image | relative_url }}"
+                alt="{{ section.image_caption | default: section.title | default: page.title }}"
+                loading="lazy"
+                class="lightbox-trigger"
+              >
+              {% if section.image_caption %}
+                <figcaption>{{ section.image_caption }}</figcaption>
+              {% endif %}
+            </figure>
+
+          {% elsif section.gallery %}
+
+            <!-- Gallery: text above, image grid below -->
+            {% if section.text %}
+              <div class="section-text section-text--wide">{{ section.text | markdownify }}</div>
+            {% endif %}
+            <div class="section-gallery" data-count="{{ section.gallery.size }}">
+              {% for img in section.gallery %}
+                <figure class="gallery-item">
+                  <img
+                    src="{{ img.src | relative_url }}"
+                    alt="{{ img.caption | default: section.title | default: page.title }}"
+                    loading="lazy"
+                    class="lightbox-trigger"
+                  >
+                  {% if img.caption %}
+                    <figcaption>{{ img.caption }}</figcaption>
+                  {% endif %}
+                </figure>
+              {% endfor %}
+            </div>
+
+          {% else %}
+
+            <!-- Text only -->
+            {% if section.text %}
+              <div class="section-text section-text--wide">{{ section.text | markdownify }}</div>
+            {% endif %}
+
+          {% endif %}
+
+        </section>
+      {% endfor %}
+    </div>
+
+  {% else %}
+
+    <!-- Legacy: raw markdown body (for older project files) -->
+    <div class="project-content prose">
+      {{ content }}
+    </div>
+
+  {% endif %}
+
 
 </div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="lightbox-backdrop"></div>
+  <button class="lightbox-close" aria-label="Close image viewer">&times;</button>
+  <div class="lightbox-stage">
+    <img src="" alt="" class="lightbox-img">
+    <p class="lightbox-caption"></p>
+  </div>
+</div>
+
+<script>
+(function () {
+  var lb      = document.getElementById('lightbox');
+  var lbImg   = lb.querySelector('.lightbox-img');
+  var lbCap   = lb.querySelector('.lightbox-caption');
+  var lbClose = lb.querySelector('.lightbox-close');
+  var lbBack  = lb.querySelector('.lightbox-backdrop');
+
+  function openLb(img) {
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    var fig = img.closest('figure');
+    var caption = fig ? (fig.querySelector('figcaption') || {textContent: ''}).textContent.trim() : '';
+    lbCap.textContent = caption;
+    lbCap.style.display = caption ? '' : 'none';
+    lb.classList.add('is-open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+
+  function closeLb() {
+    lb.classList.remove('is-open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.lightbox-trigger').forEach(function (img) {
+    img.addEventListener('click', function () { openLb(img); });
+  });
+
+  lbClose.addEventListener('click', closeLb);
+  lbBack.addEventListener('click', closeLb);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lb.classList.contains('is-open')) closeLb();
+  });
+})();
+</script>

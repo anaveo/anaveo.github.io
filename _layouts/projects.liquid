@@ -1,0 +1,101 @@
+---
+layout: default
+---
+<div class="page-projects">
+  <div class="projects-page-wrap">
+
+    <div class="projects-page-header">
+      <h1 class="projects-page-title">Projects</h1>
+      <p class="projects-page-sub">A collection of things I've built — from products to weekend experiments.</p>
+    </div>
+
+    <!-- The Big Stuff -->
+    <section class="projects-category-section">
+      <div class="projects-category-header">
+        <h2 class="projects-category-title">The Big Stuff</h2>
+        <p class="projects-category-desc">Shipped products, startups, and serious builds.</p>
+      </div>
+      {% assign big = site.projects | where: "category", "the big stuff" | where_exp: "item", "item.visible != false" | sort: "date" | reverse %}
+      <div class="projects-list">
+        {% for project in big %}
+          <a href="{% if project.external_url %}{{ project.external_url }}{% else %}{{ project.url | relative_url }}{% endif %}"
+             class="project-card"
+             {% if project.external_url %}target="_blank" rel="noopener noreferrer"{% endif %}>
+
+            <div class="card-img-wrap">
+              {% if project.img %}
+                <img
+                  src="{{ project.img | relative_url }}"
+                  alt="{{ project.title }}"
+                  loading="lazy"
+                >
+              {% else %}
+                <div class="card-img-placeholder">
+                  <span>{{ project.title | slice: 0 }}</span>
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="card-body">
+              <h2 class="card-title">{{ project.title }}</h2>
+              {% if project.description %}
+                <p class="card-desc">{{ project.description }}</p>
+              {% endif %}
+            </div>
+
+
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <div class="projects-section-sep"></div>
+
+    <!-- Just for Fun -->
+    <section class="projects-category-section">
+      <div class="projects-category-header">
+        <h2 class="projects-category-title">Just for Fun</h2>
+        <p class="projects-category-desc">Side projects, experiments, and things I built to learn.</p>
+      </div>
+      {% assign fun = site.projects | where: "category", "just for fun" | where_exp: "item", "item.visible != false" | sort: "date" | reverse %}
+      {% assign prev_year = "" %}
+      <div class="projects-list">
+        {% for project in fun %}
+          {% assign yr = project.date | date: "%Y" %}
+          {% if yr != prev_year %}
+            <div class="year-divider"><span>{{ yr }}</span></div>
+            {% assign prev_year = yr %}
+          {% endif %}
+          <a href="{% if project.external_url %}{{ project.external_url }}{% else %}{{ project.url | relative_url }}{% endif %}"
+             class="project-card"
+             {% if project.external_url %}target="_blank" rel="noopener noreferrer"{% endif %}>
+
+            <div class="card-img-wrap">
+              {% if project.img %}
+                <img
+                  src="{{ project.img | relative_url }}"
+                  alt="{{ project.title }}"
+                  loading="lazy"
+                >
+              {% else %}
+                <div class="card-img-placeholder">
+                  <span>{{ project.title | slice: 0 }}</span>
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="card-body">
+              <h2 class="card-title">{{ project.title }}</h2>
+              {% if project.description %}
+                <p class="card-desc">{{ project.description }}</p>
+              {% endif %}
+            </div>
+
+
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+  </div>
+</div>

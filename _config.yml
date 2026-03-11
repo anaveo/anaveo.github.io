@@ -9,12 +9,15 @@ email: anavekar.om@gmail.com
 description: Engineer and tinkerer building at the intersection of hardware, software, and AI.
 keywords: om, om-anavekar, anaveo, portfolio, hardware, software, embedded
 lang: en
-icon: Om_Favicon_32x32.png
+icon: Om_Orange_Favicon_32x32.png
 
 url: https://anaveo.github.io
 baseurl:
 
 theme_default: dark
+
+resume_url: https://drive.google.com/file/d/1GhM93WU0K5AkjreBDfErxRbcU9Snyf-E/view?usp=drive_link
+profile_img: assets/img/Profile_Pic.jpg
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -64,6 +67,10 @@ exclude:
   - _news/
   - _plugins/
   - docker-compose-slim.yml
+# Redirect Jekyll cache to Linux filesystem so WSL can write it
+# (avoids NTFS permission errors when running bundle exec jekyll serve from WSL)
+cache_dir: /tmp/.jekyll-cache-anaveo
+
 keep_files:
   - CNAME
   - .nojekyll
@@ -76,9 +83,6 @@ plugins:
 sass:
   style: compressed
 
-# Redirect Jekyll cache to Linux filesystem so WSL can write it
-# (avoids NTFS permission errors when running bundle exec jekyll serve from WSL)
-cache_dir: /tmp/.jekyll-cache-anaveo
 
 defaults:
   - scope:

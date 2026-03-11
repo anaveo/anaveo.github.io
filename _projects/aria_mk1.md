@@ -3,7 +3,9 @@ layout: project
 title: Aria MK1
 description: A portable wind turbine for hikers and remote personnel.
 img: assets/img/projects/aria_mk1/front.jpg
+date: 2021-09-01
 importance: 2
+homepage_featured: true
 category: just for fun
 ---
 

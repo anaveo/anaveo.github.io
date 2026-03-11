@@ -1,0 +1,136 @@
+// =============================================================================
+// Projects Page — Categorized with Year Dividers
+// =============================================================================
+
+.page-projects {
+  padding-top: var(--nav-height);
+}
+
+.projects-page-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-16) var(--side-pad) var(--space-24);
+}
+
+.projects-page-header {
+  margin-bottom: var(--space-16);
+}
+
+.projects-page-title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: var(--space-4);
+}
+
+.projects-page-sub {
+  font-size: var(--text-lg);
+  color: var(--muted);
+  max-width: 55ch;
+  line-height: 1.6;
+}
+
+// -----------------------------------------------------------------------------
+// Section separator between Big Stuff and Just for Fun
+// -----------------------------------------------------------------------------
+
+.projects-section-sep {
+  height: 1px;
+  background: var(--border);
+  margin: var(--space-24) 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Category sections
+// -----------------------------------------------------------------------------
+
+.projects-category-section {
+  margin-bottom: 0;
+}
+
+.projects-category-header {
+  margin-bottom: var(--space-8);
+}
+
+.projects-category-title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: var(--space-2);
+  line-height: 1.1;
+}
+
+.projects-category-desc {
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+// -----------------------------------------------------------------------------
+// Year dividers
+// -----------------------------------------------------------------------------
+
+.year-divider {
+  display: flex;
+  align-items: center;
+  margin: var(--space-8) 0 var(--space-6);
+
+  &::before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  span {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    padding: 0 var(--space-4);
+    flex-shrink: 0;
+  }
+
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Projects list (reuses .project-card styles from _home.scss)
+// -----------------------------------------------------------------------------
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--card-gap);
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+
+  // Year dividers span the full grid width
+  .year-divider {
+    grid-column: 1 / -1;
+  }
+}

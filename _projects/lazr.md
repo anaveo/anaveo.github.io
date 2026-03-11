@@ -3,6 +3,7 @@ layout: project
 title: LAZR
 description: A gesture-based TV remote.
 img: assets/img/projects/lazr/lazr.jpg
+date: 2019-01-01
 importance: 4
 category: just for fun
 ---

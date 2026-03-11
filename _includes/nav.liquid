@@ -1,9 +1,11 @@
 <nav class="site-nav" aria-label="Site navigation">
   <div class="nav-inner">
-    <a href="{{ site.baseurl }}/" class="nav-brand">{{ site.first_name }} {{ site.last_name }}</a>
+    <a href="{{ site.baseurl }}/" class="nav-brand" aria-label="{{ site.first_name }} {{ site.last_name }} — Home">
+      <img src="{{ '/assets/img/Om_Orange_100x100.png' | relative_url }}" alt="{{ site.first_name }} {{ site.last_name }}" class="nav-logo">
+    </a>
     <div class="nav-links">
-      <a href="{{ site.baseurl }}/" class="nav-link{% if page.url == '/' %} active{% endif %}">Projects</a>
-      <a href="{{ site.baseurl }}/about/" class="nav-link{% if page.url contains '/about' %} active{% endif %}">About</a>
+      <a href="{{ site.baseurl }}/" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a>
+      <a href="{{ site.baseurl }}/projects/" class="nav-link{% if page.url contains '/projects' %} active{% endif %}">Projects</a>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
         <!-- Sun icon (shown in dark mode to switch to light) -->
         <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
