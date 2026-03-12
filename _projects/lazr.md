@@ -19,6 +19,8 @@ sections:
   - title: Overview
     text: |
       Similar to Gestr, my hand gesture translating glove project, LAZR is a remote which uses hand gestures to control functions of a TV. I undertook this project to understand IR signals and learn Autodesk Eagle, a PCB design software.
+
+      LAZR uses a ESP8266 microcontroller connected to 5 flex sensors for gesture recognition. A 4051 analog multiplexer was used to measure the sensors simultaneously. On top of WiFi functions, the board contains an IR transceiver to program the remote and send signals.
     image: assets/img/projects/lazr/thumbs_up.jpg
     image_caption: Thumbs up!
 
@@ -29,9 +31,9 @@ sections:
   - title: Build
     gallery:
       - src: assets/img/projects/lazr/layout.jpg
-        caption: PCB layout — Autodesk Eagle
+        caption: PCB layout
       - src: assets/img/projects/lazr/bare_pcb.jpg
-        caption: Bare PCB — front and back
+        caption: Bare PCB
       - src: assets/img/projects/lazr/assembled_pcb.jpg
         caption: Assembled PCB
 ---
