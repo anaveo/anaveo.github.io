@@ -141,14 +141,13 @@ $prose-max: 660px;
   font-size: var(--text-sm);
   font-weight: 500;
   background: transparent;
-  // color and border-color driven by --pill-color; fallback to muted border
-  --pill-color: var(--muted);
-  color: var(--pill-color);
-  border: 1px solid var(--pill-color);
-  transition: color var(--ease), border-color var(--ease), filter var(--ease);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  transition: color var(--ease), border-color var(--ease);
 
   &:hover {
-    filter: brightness(1.25);
+    color: var(--text);
+    border-color: var(--muted);
   }
 }
 

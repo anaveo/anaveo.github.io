@@ -3,12 +3,9 @@ layout: project
 title: Glo Rev 1
 tagline: A hackable, Arduino-Based RGB LED Strip Controller
 description: >
-  A quad-channel addressable LED driver built around the ATmega328p. Designed,
-  manufactured, and shipped through a successful Kickstarter campaign that reached
-  over 300% of its funding goal.
 img: assets/img/projects/glo_r1/top.jpg
 banner: assets/img/projects/glo_r1/banner.jpg
-date: 2020-01-01
+date: 2020-07-4
 importance: 2
 category: just for fun
 visible: true
@@ -16,13 +13,10 @@ visible: true
 links:
   - label: Kickstarter
     url: https://www.kickstarter.com/projects/omnitech/glo-a-hackable-arduino-based-rgb-led-strip-controller?ref=user_menu
-    color: "#05CE78"
   - label: Instructables
     url: https://www.instructables.com/Glo-a-Hackable-Arduino-Based-RGB-StripNeopixel-Con/
-    color: "#edae00"
   - label: GitHub
     url: https://github.com/anaveo/Glo1-Kick
-    color: "#6900cc"
 
 highlights:
   - label: Funded
@@ -35,16 +29,18 @@ highlights:
 sections:
   - title: Overview
     text: |
-      Glo is my first hardware product released to market, an addressable LED driver board with external IO and programmable functions.
+      Glo started out as a weekend project during the pandemic to make a simple ARGB LED driver. It was launched as a Kickstarter campaign in 2020 and gained traction despite having no marketing, shipping over 100 units to 65 backers.
+
       Built around the ATmega328p with the Arduino bootloader, it serves as a compact Arduino substitute purpose-built for LED applications.
       Screw terminal connectors and four independent ARGB channels make it ideal for rugged lighting installations.
     image: assets/img/projects/glo_r1/glo_arduino.jpg
-    image_caption: Glo Rev 1 next to an Arduino Uno
+    image_caption: Glo Rev 1 next to Arduino UNO
 
   - title: System Design
     text: |
-      Glo exposes two separate USB ports, one for power, one for programming, so the board can be flashed
-      while LEDs are actively running. Two programmable pushbuttons and a hall effect sensor provide built-in
+      Glo can simulataneously drive four 5V ARGB LED strips. It can be powered from either a screw terminal or via USB. A secondary programming USB is present for flashing the board while LEDs are actively running.
+
+      Two programmable pushbuttons and a hall effect sensor provide built-in
       user inputs, and a full GPIO header makes it easy to attach sensors, displays, and communication modules.
     full_image: assets/img/projects/glo_r1/labeled_diagram.jpg
     image_caption: Pinout and feature diagram

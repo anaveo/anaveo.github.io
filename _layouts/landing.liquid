@@ -84,8 +84,9 @@ layout: default
               <span class="card-category">{{ project.category }}</span>
             {% endif %}
             <h2 class="card-title">{{ project.title }}</h2>
-            {% if project.description %}
-              <p class="card-desc">{{ project.description }}</p>
+            {% assign card_sub = project.tagline | default: project.description %}
+            {% if card_sub %}
+              <p class="card-desc">{{ card_sub }}</p>
             {% endif %}
           </div>
 

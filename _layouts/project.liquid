@@ -41,11 +41,7 @@ layout: default
       {% if all_links %}
         <div class="project-links">
           {% for link in all_links %}
-            <a href="{{ link.url }}"
-               class="project-link-pill"
-               target="_blank"
-               rel="noopener noreferrer"
-               {% if link.color %}style="--pill-color: {{ link.color }};"{% endif %}>
+            <a href="{{ link.url }}" class="project-link-pill" target="_blank" rel="noopener noreferrer">
               {{ link.label }} ↗
             </a>
           {% endfor %}
